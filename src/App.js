@@ -12,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <h1>App</h1>
+      <h2>Test 2</h2>
       <button onClick={playAudio}>Audio</button>
     </div>
   );
