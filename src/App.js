@@ -3,8 +3,10 @@ import './App.scss';
 
 function App() {
 
-  const playAudio = (name) => {
-    new Audio(require(`./Audio/Phonemes/PhAI.m4a`)).play();
+  const audio = new Audio(require(`./Audio/Phonemes/PhAI.m4a`))
+
+  const playAudio = () => {
+    audio.play();
   }
 
   return (
