@@ -3,7 +3,7 @@ import './App.scss';
 
 function App() {
 
-  const audio = new Audio(require(`./Audio/Phonemes/PhAI.m4a`))
+  const audio = new Audio(require(`./Audio/Phonemes/Recording.mp3`))
 
   const playAudio = () => {
     audio.play();
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <h1>App</h1>
-      <h2>Test 2</h2>
+      <h2>Test 3</h2>
       <button onClick={playAudio}>Audio</button>
     </div>
   );
