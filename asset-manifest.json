@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/english-ipa/static/css/main.9d8ff19f.css",
-    "main.js": "/english-ipa/static/js/main.40b2c95d.js",
+    "main.js": "/english-ipa/static/js/main.81b7cd98.js",
     "static/media/PhAI.m4a": "/english-ipa/static/media/PhAI.51d4744fb9189048e78a.m4a",
     "index.html": "/english-ipa/index.html",
     "main.9d8ff19f.css.map": "/english-ipa/static/css/main.9d8ff19f.css.map",
-    "main.40b2c95d.js.map": "/english-ipa/static/js/main.40b2c95d.js.map"
+    "main.81b7cd98.js.map": "/english-ipa/static/js/main.81b7cd98.js.map"
   },
   "entrypoints": [
     "static/css/main.9d8ff19f.css",
-    "static/js/main.40b2c95d.js"
+    "static/js/main.81b7cd98.js"
   ]
 }
