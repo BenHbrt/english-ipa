@@ -12,3 +12,43 @@
     font-weight: 700;
     font-size: 1.5rem;
 }
+
+.fricative {
+    background-color: $fricative;
+}
+
+.fricative.voiceless {
+    background-color: lighten($fricative, 35%);
+}
+
+.plosive {
+    background-color: $plosive;
+}
+
+.plosive.voiceless {
+    background-color: lighten($plosive, 30%);
+}
+
+.affricate {
+    background-color: $affricate;
+}
+
+.affricate.voiceless {
+    background-color: lighten($affricate, 40%);
+}
+
+.approximant {
+    background-color: $approximant;
+}
+
+.nasal {
+    background-color: $nasal;
+}
+
+.short {
+    background-color: yellow;
+}
+
+.long {
+    background-color: purple;
+}

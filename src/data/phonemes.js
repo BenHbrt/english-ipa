@@ -75,49 +75,49 @@ const phonemes = [
         symbol: "ɪə",
         audio: "",
         type: "dipthong",
-        subType: ["voiced"]
+        subType: ["voiced", "long"]
     },
     {
         symbol: "ʊə",
         audio: "",
         type: "dipthong",
-        subType: ["voiced"]
+        subType: ["voiced", "long"]
     },
     {
         symbol: "eə",
         audio: "",
         type: "dipthong",
-        subType: ["voiced"]
+        subType: ["voiced", "long"]
     },
     {
         symbol: "eɪ",
         audio: "",
         type: "dipthong",
-        subType: ["voiced"]
+        subType: ["voiced", "long"]
     },
     {
         symbol: "ɔɪ",
         audio: "",
         type: "dipthong",
-        subType: ["voiced"]
+        subType: ["voiced", "long"]
     },
     {
         symbol: "aɪ",
         audio: "",
         type: "dipthong",
-        subType: ["voiced"]
+        subType: ["voiced", "long"]
     },
     {
         symbol: "əʊ",
         audio: "",
         type: "dipthong",
-        subType: ["voiced"]
+        subType: ["voiced", "long"]
     },
     {
         symbol: "aʊ",
         audio: "",
         type: "dipthong",
-        subType: ["voiced"]
+        subType: ["voiced", "long"]
     },
     {
         symbol: "p",

@@ -13,8 +13,14 @@ export const DisplayContext = createContext({
     vowels: false,
     monothong: false,
     dipthong: false,
+    short: false,
     long: false,
-    short: false
+    pairs: false,
+    plosives: false,
+    fricatives: false,
+    affricates: false,
+    nasals: false,
+    approximants: false
   },
   setDisplay: () => {}
 });
@@ -25,8 +31,14 @@ function App() {
     vowels: false,
     monothong: false,
     dipthong: false,
+    short: false,
     long: false,
-    short: false
+    pairs: false,
+    plosives: false,
+    fricatives: false,
+    affricates: false,
+    nasals: false,
+    approximants: false
   })
   const value = { display, setDisplay }
   
@@ -42,8 +54,9 @@ function App() {
         <h1>English IPA</h1>
         {/* <h2>Test 3</h2>
         <button onClick={playAudio}>Audio</button> */}
-        {/* <ControlPanel /> */}
+        
         <div className="container">
+          <ControlPanel />
           <div className="chart">
             <div className="vowels" style={{borderColor: `${display.vowels ? "lightgreen" : "transparent"}`}}>
               <Monothongs />
