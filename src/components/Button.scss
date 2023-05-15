@@ -1,0 +1,34 @@
+@import "../variables.scss";
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: $phoneme-border solid black;
+    height: calc($button * 2);
+    padding: 0 $button;
+    border-radius: $button;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.selected {
+    border-color: darkgray;
+    background-color: darkgray;
+    color: white;
+}
+
+.inactive {
+    border-color: lightgray;
+    color: lightgray;
+
+    &:hover {
+        cursor: auto;
+    }
+}
+
+.main {
+    font-weight: 700;
+}

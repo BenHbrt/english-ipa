@@ -1,1 +1,39 @@
 @import "../variables.scss";
+
+.controlPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: $gap;
+    width: 8rem;
+    margin-right: 2rem;
+
+    & > div:nth-child(1),
+    & > div:nth-child(6) {
+        align-self: start;
+    }
+
+    & > div:nth-child(6) {
+        margin-top: $gap;
+    }
+
+    &_voicedCon {
+        display: flex;
+        gap: $padding;
+    }
+
+    &_voiceless,
+    &_voiced {
+        border: 1px solid black;
+        border-radius: calc($border-radius/2);
+        padding: 0 5px;
+    }
+
+    &_voiceless {
+        background-color: lighten(grey, 40%);
+    }
+
+    &_voiced {
+        background-color: grey;
+    }
+}
