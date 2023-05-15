@@ -1,0 +1,14 @@
+@import "../variables.scss";
+
+.phoneme {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: $phoneme-dimensions;
+    width: $phoneme-dimensions;
+    border: $phoneme-border solid black;
+    border-radius: $border-radius;
+    font-weight: 700;
+    font-size: 1.5rem;
+}

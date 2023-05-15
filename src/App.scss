@@ -1,0 +1,26 @@
+@import "./variables.scss";
+
+.App {
+
+    & > h1 {
+        text-align: center;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.chart {
+    display: inline-block;
+}
+
+.vowels {
+    display: flex;
+    justify-content: space-between;
+    border: $container-border solid transparent;
+    border-radius: $border-radius;
+    padding: $padding;
+    margin-bottom: $padding;
+}

@@ -1,0 +1,42 @@
+@import "../variables.scss";
+
+.consonants {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: $container-border solid transparent;
+    border-radius: $border-radius;
+    padding: $padding;
+    gap: $padding;
+    width: calc(($container-border * 18) + ($padding * 25) + ($phoneme-dimensions * 8));
+
+    &_pair {
+        display: flex;
+        border: $container-border solid transparent;
+        border-radius: $border-radius;
+        padding: $padding;
+        gap: calc(($padding * 3) + ($container-border * 2));
+    }
+
+    &_nasal {
+        display: flex;
+        border: $container-border solid transparent;
+        border-radius: $border-radius;
+        padding: $padding;
+        gap: calc(($padding * 3) + ($container-border * 2));
+    }
+
+    &_approximant {
+        display: flex;
+        border: $container-border solid transparent;
+        border-radius: $border-radius;
+        padding: $padding;
+        gap: calc(($padding * 3) + ($container-border * 2));
+    }
+
+    &_h {
+        border: $container-border solid transparent;
+        border-radius: $border-radius;
+        padding: $padding;
+    }
+}

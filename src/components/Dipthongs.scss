@@ -1,0 +1,14 @@
+@import "../variables.scss";
+
+.dipthongs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    border: $container-border solid transparent;
+    border-radius: $border-radius;
+    padding: $padding;
+    gap: calc(($padding * 3) + ($container-border * 2));
+    height: calc(($container-border * 6) + ($padding * 8) + ($phoneme-dimensions * 3));
+    width: calc(($container-border * 6) + ($padding * 8) + ($phoneme-dimensions * 3));
+}
