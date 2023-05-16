@@ -13,6 +13,13 @@
     align-items: center;
 }
 
+.chartContainer {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .chart {
     display: inline-block;
 }

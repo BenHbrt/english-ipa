@@ -11,6 +11,11 @@
     border-radius: $border-radius;
     font-weight: 700;
     font-size: 1.5rem;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
 }
 
 .fricative {
@@ -51,4 +56,12 @@
 
 .long {
     background-color: purple;
+}
+
+.voiced {
+    background-color: $voiced;
+}
+
+.voiceless {
+    background-color: lighten(grey, 40%);
 }

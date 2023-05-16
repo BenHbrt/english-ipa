@@ -2,11 +2,13 @@ import './Phoneme.scss'
 
 import { useContext } from 'react'
 import { DisplayContext } from '../App'
+import { ModeContext } from '../App'
 
 const Phoneme = ({ phoneme }) => {
 
     let color = ""
     const { display } = useContext(DisplayContext)
+    const { mode, setMode } = useContext(ModeContext)
 
     if (display.fricatives && phoneme.subType.includes("fricative")) {
         color = "fricative"
@@ -26,10 +28,16 @@ const Phoneme = ({ phoneme }) => {
 
     if (display.voiced === true && phoneme.subType.includes("voiceless")) {
         color += " voiceless"
+    } else if (display.voiced === true && phoneme.subType.includes("voiced") && color === "") {
+        color = "voiced"
+    }
+
+    const func = () => {
+        setMode((...prev) => {return {mode: mode.mode, text: (mode.text + phoneme.symbol)}})
     }
 
     return (
-        <div className={`phoneme ${color}`}>
+        <div className={`phoneme ${color}`} onClick={() => {if (mode.mode === "keyboard") {func()}}}>
             {phoneme.symbol}
         </div>
     )

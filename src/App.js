@@ -1,12 +1,14 @@
 import './Global.scss'
 import './App.scss';
 
-import { createContext, useState, useMemo } from 'react'
+import { createContext, useState } from 'react'
 
 import Monothongs from './components/Monothongs';
 import Dipthongs from './components/Dipthongs';
 import Consonants from './components/Consonants';
 import ControlPanel from './components/ControlPanel';
+import ModeSelector from './components/ModeSelector';
+import Keyboard from './components/Keyboard';
 
 export const DisplayContext = createContext({
   display: {
@@ -26,6 +28,11 @@ export const DisplayContext = createContext({
   setDisplay: () => {}
 });
 
+export const ModeContext = createContext({
+  mode: "sound",
+  text: ""
+})
+
 function App() {
 
   const [display, setDisplay] = useState({
@@ -42,7 +49,13 @@ function App() {
     nasals: false,
     approximants: false
   })
-  const value = { display, setDisplay }
+  const displayValue = { display, setDisplay }
+
+  const [mode, setMode] = useState({
+    mode: "sound",
+    text: ""
+  })
+  const modeValue = { mode, setMode }
   
   // const audio = new Audio(require(`./Audio/Phonemes/Recording.mp3`))
 
@@ -52,22 +65,31 @@ function App() {
 
   return (
     <div className="App">
-      <DisplayContext.Provider value={value}>
+      <ModeContext.Provider value={modeValue}>
+      <DisplayContext.Provider value={displayValue}>
         <h1>English IPA</h1>
         {/* <h2>Test 3</h2>
         <button onClick={playAudio}>Audio</button> */}
         
         <div className="container">
           <ControlPanel />
-          <div className="chart">
-            <div className="vowels" style={{borderColor: `${display.vowels ? "lightgreen" : "transparent"}`}}>
-              <Monothongs />
-              <Dipthongs />
+          <div className="chartContainer">
+            <div className="chart">
+              <div className="vowels" style={{borderColor: `${display.vowels ? "lightgreen" : "transparent"}`}}>
+                <Monothongs />
+                <Dipthongs />
+              </div>
+              <Consonants />
             </div>
-            <Consonants />
+            {
+              mode.mode === "keyboard" ? <Keyboard /> : null
+            }
           </div>
+          <ModeSelector />
+          <button onClick={() => console.log(mode)}>Mode</button>
         </div>
       </DisplayContext.Provider>
+      </ModeContext.Provider>
     </div>
   );
 }

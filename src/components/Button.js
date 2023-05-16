@@ -8,7 +8,6 @@ const Button = ({ name, func }) => {
     const { display } = useContext(DisplayContext)
     const vowelParts = ["monothongs", "dipthongs", "short", "long"]
     const consonantParts = ["fricatives", "affricates", "plosives", "pairs", "nasals", "approximants", "voiced"]
-    const voicedParts = ["fricatives", "affricates", "plosives"]
 
     let status = ""
     if (display[name] === true && (name === "vowels" || name === "consonants")) {
