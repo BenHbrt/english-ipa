@@ -8,16 +8,16 @@ const ModeButton = ({ name }) => {
     const { mode, setMode } = useContext(ModeContext)
 
     const func = () => {
-        setMode((...prev) => {
+        setMode(() => {
             return {
-                text: mode.text, mode: name
+                text: "", mode: name
             }
         })
     }
 
     return (
         <div className="modeButton" onClick={() => {if (mode.mode !== name) {func()}}}>
-            <img src={require(`../img/${name}_${mode.mode === name ? "600" : "300" }.png`)} />
+            <img src={require(`../img/${name}_${mode.mode === name ? "600" : "300" }.png`)} alt={""} />
         </div>
     )
 }

@@ -4,14 +4,14 @@
     align-self: flex-start;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     gap: $gap;
     width: 10rem;
     margin-right: 2rem;
 
     & > div:nth-child(1),
     & > div:nth-child(6) {
-        align-self: start;
+        align-self: flex-start;
 
         &.selected {
             padding: 0 calc($button - 2px);
