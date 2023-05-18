@@ -40,16 +40,22 @@ const ControlPanel = () => {
             <Button func={() => setDisplay((prev) => {return {...prev, short: !display.short}})} name={"short"} />
             <Button func={() => setDisplay((prev) => {return {...prev, long: !display.long}})} name={"long"} />
             <Button func={() => handleChange("consonants")} name={"consonants"} />
-            <Button func={() => setDisplay((prev) => {return {...prev, pairs: !display.pairs}})} name={"pairs"} />
             <Button func={() => setDisplay((prev) => {return {...prev, plosives: !display.plosives}})} name={"plosives"} />
             <Button func={() => setDisplay((prev) => {return {...prev, fricatives: !display.fricatives}})} name={"fricatives"} />
             <Button func={() => setDisplay((prev) => {return {...prev, affricates: !display.affricates}})} name={"affricates"} />
             <Button func={() => setDisplay((prev) => {return {...prev, nasals: !display.nasals}})} name={"nasals"} />
             <Button func={() => setDisplay((prev) => {return {...prev, approximants: !display.approximants}})} name={"approximants"} />
+            <Button func={() => setDisplay((prev) => {return {...prev, pairs: !display.pairs}})} name={"pairs"} />
             <Button func={() => setDisplay((prev) => {return {...prev, voiced: !display.voiced}})} name={"voiced"} />
             <div className="controlPanel_voicedCon" style={{visibility: `${display.voiced ? "visible" : "hidden"}`}}>
-                <div className="controlPanel_voiceless">voiceless</div>
-                <div className="controlPanel_voiced">voiced</div>
+                <div className="controlPanel_voiceless">
+                    <div>voiceless</div>
+                    <div>(light)</div>
+                </div>
+                <div className="controlPanel_voiced">
+                    <div>voiced</div>
+                    <div>(dark)</div>
+                </div>
             </div>
         </div>
     )

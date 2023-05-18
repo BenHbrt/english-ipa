@@ -75,7 +75,7 @@ function App() {
           <ControlPanel />
           <div className="chartContainer">
             <div className="chart">
-              <div className="vowels" style={{borderColor: `${display.vowels ? "lightgreen" : "transparent"}`}}>
+              <div className={`vowels ${display.vowels ? "vowelsLine" : ""}`}>
                 <Monothongs />
                 <Dipthongs />
               </div>

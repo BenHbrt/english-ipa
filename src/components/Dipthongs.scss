@@ -11,4 +11,10 @@
     gap: calc(($padding * 3) + ($container-border * 2));
     height: calc(($container-border * 6) + ($padding * 8) + ($phoneme-dimensions * 3));
     width: calc(($container-border * 6) + ($padding * 8) + ($phoneme-dimensions * 3));
+
+    
+}
+
+.dipthongs.dipthongsLine {
+    border-color: $dipthongs;
 }

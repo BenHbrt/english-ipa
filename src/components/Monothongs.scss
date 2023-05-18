@@ -8,5 +8,9 @@
     border-radius: $border-radius;
     padding: $padding;
     gap: calc(($padding * 3) + ($container-border * 2));
-    width: calc(($container-border * 8) + ($padding * 11) + ($phoneme-dimensions * 4))
+    width: calc(($container-border * 8) + ($padding * 11) + ($phoneme-dimensions * 4));
+
+    &.monothongsLine {
+        border-color: $monothongs;
+    }
 }

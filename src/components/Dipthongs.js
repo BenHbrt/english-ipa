@@ -12,7 +12,7 @@ const Dipthongs = () => {
     const { display } = useContext(DisplayContext)
 
     return (
-        <div className="dipthongs" style={{borderColor: `${display.dipthongs ? "orange" : "transparent"}`}}>
+        <div className={`dipthongs ${display.dipthongs ? "dipthongsLine" : ""}`}>
             {
                 dipthongs.map((dipthongs, i) => {
                     return <Phoneme phoneme={dipthongs} key={i} />

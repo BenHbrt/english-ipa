@@ -12,13 +12,80 @@
     &:hover {
         cursor: pointer;
     }
+
+    &.selected {
+
+        &.Vowels {
+            border-color: $vowels;
+            border-width: $container-border;
+        }
+
+        &.Monothongs {
+            border-color: $monothongs;
+            border-width: $container-border;
+        }
+
+        &.Dipthongs {
+            border-color: $dipthongs;
+            border-width: $container-border;
+        }
+
+        &.Short {
+            border-color: $short;
+            background-color: $short;
+        }
+
+        &.Long {
+            border-color: $long;
+            background-color: $long;
+        }
+
+        &.Consonants {
+            border-color: $consonants;
+            border-width: $container-border;
+        }
+
+        &.Pairs {
+            border-color: $pair;
+            border-width: $container-border;
+        }
+
+        &.Plosives {
+            border-color: $plosive;
+            background-color: $plosive;
+        }
+
+        &.Fricatives {
+            border-color: $fricative;
+            background-color: $fricative;
+        }
+
+        &.Affricates {
+            border-color: $affricate;
+            background-color: $affricate;
+        }
+
+        &.Nasals {
+            border-color: $nasal;
+            background-color: $nasal;
+        }
+
+        &.Approximants {
+            border-color: $approximant;
+            background-color: $approximant;
+        }
+
+        &.Voiced {
+            border-color: $voiced;
+            background-color: $voiced;
+        }
+    }
 }
 
-.selected {
-    border-color: darkgray;
-    background-color: darkgray;
-    color: white;
-}
+// .selected {
+//     border-color: darkgray;
+//     background-color: darkgray;
+// }
 
 .inactive {
     border-color: lightgray;
@@ -31,4 +98,9 @@
 
 .main {
     font-weight: 700;
+}
+
+.voice {
+    color: black;
+    border-color: black;
 }

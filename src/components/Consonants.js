@@ -12,8 +12,8 @@ const Consonants = () => {
     const { display } = useContext(DisplayContext)
 
     return (
-        <div className="consonants" style={{borderColor: `${display.consonants ? "red" : "transparent"}`}}>
-            <div className="consonants_pair" style={{borderColor: `${display.pairs ? "gray" : "transparent"}`}}>
+        <div className={`consonants ${display.consonants ? "consonantsLine" : ""}`}>
+            <div className={`consonants_pair ${display.pairs ? "pairsLine" : ""}`}>
                 <Phoneme phoneme={consonants[0]} />
                 <Phoneme phoneme={consonants[1]} />
             </div>

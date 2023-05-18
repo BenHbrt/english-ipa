@@ -12,7 +12,7 @@ const Vowels = () => {
     const { display } = useContext(DisplayContext)
 
     return (
-        <div className="monothongs" style={{borderColor: `${display.monothongs ? "blue" : "transparent"}`}}>
+        <div className={`monothongs ${display.monothongs ? "monothongsLine" : ""}`}>
             {
                 vowels.map((vowel, i) => {
                     return <Phoneme phoneme={vowel} key={i} />
