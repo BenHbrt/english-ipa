@@ -1,13 +1,28 @@
 {
   "files": {
-    "main.css": "/english-ipa/static/css/main.74cb90ab.css",
-    "main.js": "/english-ipa/static/js/main.cd642827.js",
+    "main.css": "/english-ipa/static/css/main.763bee71.css",
+    "main.js": "/english-ipa/static/js/main.1429aaeb.js",
+    "static/media/Recording.m4a": "/english-ipa/static/media/Recording.0abbd15c13b1c231d818.m4a",
+    "static/media/PhAU.mp3": "/english-ipa/static/media/PhAU.dcc190ee7c06efc47742.mp3",
+    "static/media/PhbIrd.mp3": "/english-ipa/static/media/PhbIrd.919af8ec992f0a5f3c63.mp3",
+    "static/media/PhgOOd.mp3": "/english-ipa/static/media/PhgOOd.5b71a7e6826d828f78f9.mp3",
+    "static/media/PhEI.mp3": "/english-ipa/static/media/PhEI.b3411dabcf0262007ab3.mp3",
+    "static/media/PhAIR.mp3": "/english-ipa/static/media/PhAIR.8affc1fc283f19f58eb9.mp3",
+    "static/media/PhcAt.mp3": "/english-ipa/static/media/PhcAt.7ece35de688de79d725d.mp3",
+    "static/media/PhCH.mp3": "/english-ipa/static/media/PhCH.19e8aedd71e028c89136.mp3",
+    "static/media/PhdOg.mp3": "/english-ipa/static/media/PhdOg.fe54b479a5afdb2842dc.mp3",
+    "static/media/PhDZ.mp3": "/english-ipa/static/media/PhDZ.b8ec22032c96d9c3779a.mp3",
+    "static/media/PhEAR.mp3": "/english-ipa/static/media/PhEAR.12a8fc6feca19c58a298.mp3",
+    "static/media/PhAI.mp3": "/english-ipa/static/media/PhAI.bb4ebf1cd17d7fafcd6d.mp3",
+    "static/media/PhcURe.mp3": "/english-ipa/static/media/PhcURe.aab68459be6fd3d3cc18.mp3",
+    "static/media/PhH.mp3": "/english-ipa/static/media/PhH.d02fda37e0d29ac01bc8.mp3",
+    "static/media/PhdOOR.mp3": "/english-ipa/static/media/PhdOOR.0cae49acdcf21c7f7105.mp3",
     "index.html": "/english-ipa/index.html",
-    "main.74cb90ab.css.map": "/english-ipa/static/css/main.74cb90ab.css.map",
-    "main.cd642827.js.map": "/english-ipa/static/js/main.cd642827.js.map"
+    "main.763bee71.css.map": "/english-ipa/static/css/main.763bee71.css.map",
+    "main.1429aaeb.js.map": "/english-ipa/static/js/main.1429aaeb.js.map"
   },
   "entrypoints": [
-    "static/css/main.74cb90ab.css",
-    "static/js/main.cd642827.js"
+    "static/css/main.763bee71.css",
+    "static/js/main.1429aaeb.js"
   ]
 }
