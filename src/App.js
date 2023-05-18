@@ -56,12 +56,6 @@ function App() {
     text: ""
   })
   const modeValue = { mode, setMode }
-  
-  // const audio = new Audio(require(`./Audio/Phonemes/Recording.mp3`))
-
-  // const playAudio = () => {
-  //   audio.play();
-  // }
 
   return (
     <div className="App">

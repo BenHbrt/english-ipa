@@ -32,12 +32,23 @@ const Phoneme = ({ phoneme }) => {
         color = "voiced"
     }
 
-    const func = () => {
+    const keyFunc = () => {
         setMode((...prev) => {return {mode: mode.mode, text: (mode.text + phoneme.symbol)}})
     }
 
+    const soundFunc = () => {
+        if (phoneme.audio) {
+            const audio = new Audio(require(`../audio/${phoneme.audio}.mp3`))
+            audio.play();
+        } else {
+            const audio = new Audio(require(`../audio/Recording.m4a`))
+            audio.play();
+        }
+        
+    }
+
     return (
-        <div className={`phoneme ${color}`} onClick={() => {if (mode.mode === "keyboard") {func()}}}>
+        <div className={`phoneme ${color}`} onClick={() => {if (mode.mode === "keyboard") {keyFunc()} else {soundFunc()}}}>
             {phoneme.symbol}
         </div>
     )

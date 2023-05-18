@@ -13,7 +13,7 @@ const phonemes = [
     },
     {
         symbol: "ʊ",
-        audio: "",
+        audio: "PhgOOd",
         type: "vowel",
         subType: ["short", "voiced"]
     },
@@ -37,19 +37,19 @@ const phonemes = [
     },
     {
         symbol: "ɜ:",
-        audio: "",
+        audio: "PhbIrd",
         type: "vowel",
         subType: ["long", "voiced"]
     },
     {
         symbol: "ɔ:",
-        audio: "",
+        audio: "PhdOOR",
         type: "vowel",
         subType: ["long", "voiced"]
     },
     {
         symbol: "æ",
-        audio: "",
+        audio: "PhcAt",
         type: "vowel",
         subType: ["short", "voiced"]
     },
@@ -67,31 +67,31 @@ const phonemes = [
     },
     {
         symbol: "ɒ",
-        audio: "",
+        audio: "PhdOg",
         type: "vowel",
         subType: ["short", "voiced"]
     },
     {
         symbol: "ɪə",
-        audio: "",
+        audio: "PhEAR",
         type: "dipthong",
         subType: ["voiced", "long"]
     },
     {
         symbol: "ʊə",
-        audio: "",
+        audio: "PhcURe",
         type: "dipthong",
         subType: ["voiced", "long"]
     },
     {
         symbol: "eə",
-        audio: "",
+        audio: "PhAIR",
         type: "dipthong",
         subType: ["voiced", "long"]
     },
     {
         symbol: "eɪ",
-        audio: "",
+        audio: "PhEI",
         type: "dipthong",
         subType: ["voiced", "long"]
     },
@@ -103,7 +103,7 @@ const phonemes = [
     },
     {
         symbol: "aɪ",
-        audio: "",
+        audio: "PhAI",
         type: "dipthong",
         subType: ["voiced", "long"]
     },
@@ -115,7 +115,7 @@ const phonemes = [
     },
     {
         symbol: "aʊ",
-        audio: "",
+        audio: "PhAU",
         type: "dipthong",
         subType: ["voiced", "long"]
     },
@@ -145,13 +145,13 @@ const phonemes = [
     },
     {
         symbol: "ʧ",
-        audio: "",
+        audio: "PhCH",
         type: "consonant",
         subType: ["affricate", "pair", "voiceless"]
     },
     {
         symbol: "ʤ",
-        audio: "",
+        audio: "PhDZ",
         type: "consonant",
         subType: ["affricate", "pair", "voiced"]
     },
@@ -235,7 +235,7 @@ const phonemes = [
     },
     {
         symbol: "h",
-        audio: "",
+        audio: "PhH",
         type: "consonant",
         subType: ["fricative", "voiceless"]
     },
