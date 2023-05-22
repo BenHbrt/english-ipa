@@ -11,6 +11,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
 }
 
 .chartContainer {
@@ -18,6 +25,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (max-width: 1000px) {
+        align-self: center;
+    }
 }
 
 .chart {
@@ -44,4 +55,8 @@
     align-self: flex-start;
     width: 15rem;
     margin-left: 2rem;
+
+    @media screen and (max-width: 1000px) {
+        align-self: center;
+    }
 }

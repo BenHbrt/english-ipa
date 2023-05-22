@@ -9,6 +9,10 @@
     width: 10rem;
     margin-right: 2rem;
 
+    @media screen and (max-width: 1000px) {
+        align-self: center;
+    }
+
     & > div:nth-child(1),
     & > div:nth-child(6) {
         align-self: flex-start;
