@@ -36,3 +36,12 @@
         border-color: $vowels;
     }
 }
+
+.keyboardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: flex-start;
+    width: 15rem;
+    margin-left: 2rem;
+}

@@ -33,7 +33,13 @@ const Phoneme = ({ phoneme }) => {
     }
 
     const keyFunc = () => {
-        setMode((...prev) => {return {mode: mode.mode, text: (mode.text + phoneme.symbol)}})
+        let newText = mode.text
+        if (mode.text.length) {
+            newText = mode.text.slice(0, -1) + phoneme.symbol + "/"
+        } else {
+            newText = "/" + phoneme.symbol + "/"
+        }
+        setMode({mode: mode.mode, text: newText})
     }
 
     const soundFunc = () => {

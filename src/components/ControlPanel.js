@@ -18,7 +18,6 @@ const ControlPanel = () => {
             newObj.affricates = false
             newObj.nasals = false
             newObj.approximants = false
-            newObj.voiced = false
             newObj.consonants = !display.consonants
             setDisplay(newObj)
         } else if (key === "vowels") {

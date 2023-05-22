@@ -13,8 +13,8 @@ import Keyboard from './components/Keyboard';
 export const DisplayContext = createContext({
   display: {
     vowels: false,
-    monothong: false,
-    dipthong: false,
+    monothongs: false,
+    dipthongs: false,
     short: false,
     long: false,
     consonants: false,
@@ -37,8 +37,8 @@ function App() {
 
   const [display, setDisplay] = useState({
     vowels: false,
-    monothong: false,
-    dipthong: false,
+    monothongs: false,
+    dipthongs: false,
     short: false,
     long: false,
     consonants: false,
@@ -75,12 +75,16 @@ function App() {
               </div>
               <Consonants />
             </div>
+            
+          </div>
+          <div className="keyboardContainer">
+            <ModeSelector />
             {
               mode.mode === "keyboard" ? <Keyboard /> : null
             }
           </div>
-          <ModeSelector />
-          <button onClick={() => console.log(mode)}>Mode</button>
+          
+          
         </div>
       </DisplayContext.Provider>
       </ModeContext.Provider>
