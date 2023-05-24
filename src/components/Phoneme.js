@@ -43,13 +43,8 @@ const Phoneme = ({ phoneme }) => {
     }
 
     const soundFunc = () => {
-        if (phoneme.audio) {
-            const audio = new Audio(require(`../audio/${phoneme.audio}.mp3`))
-            audio.play();
-        } else {
-            const audio = new Audio(require(`../audio/Recording.m4a`))
-            audio.play();
-        }
+        const audio = new Audio(require(`../audio/${phoneme.audio}.mp3`))
+        audio.play();
         
     }
 

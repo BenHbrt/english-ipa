@@ -1,13 +1,13 @@
 const phonemes = [
     {
         symbol: "i:",
-        audio: "",
+        audio: "PhshEEp",
         type: "vowel",
         subType: ["long", "voiced"]
     },
     {
         symbol: "ɪ",
-        audio: "",
+        audio: "PhfIt",
         type: "vowel",
         subType: ["short", "voiced"]
     },
@@ -19,19 +19,19 @@ const phonemes = [
     },
     {
         symbol: "u:",
-        audio: "",
+        audio: "PhglUE",
         type: "vowel",
         subType: ["long", "voiced"]
     },
     {
         symbol: "e",
-        audio: "",
+        audio: "PhEgg",
         type: "vowel",
         subType: ["short", "voiced"]
     },
     {
         symbol: "ə",
-        audio: "",
+        audio: "PhSCHWA",
         type: "vowel",
         subType: ["short", "voiced"]
     },
@@ -55,13 +55,13 @@ const phonemes = [
     },
     {
         symbol: "ʌ",
-        audio: "",
+        audio: "PhUp",
         type: "vowel",
         subType: ["short", "voiced"]
     },
     {
         symbol: "ɑ:",
-        audio: "",
+        audio: "PhfAr",
         type: "vowel",
         subType: ["long", "voiced"]
     },
@@ -97,7 +97,7 @@ const phonemes = [
     },
     {
         symbol: "ɔɪ",
-        audio: "",
+        audio: "PhOI",
         type: "dipthong",
         subType: ["voiced", "long"]
     },
@@ -109,7 +109,7 @@ const phonemes = [
     },
     {
         symbol: "əʊ",
-        audio: "",
+        audio: "PhshOW",
         type: "dipthong",
         subType: ["voiced", "long"]
     },
@@ -121,25 +121,25 @@ const phonemes = [
     },
     {
         symbol: "p",
-        audio: "",
+        audio: "PhP",
         type: "consonant",
         subType: ["plosive", "pair", "voiceless"]
     },
     {
         symbol: "b",
-        audio: "",
+        audio: "PhB",
         type: "consonant",
         subType: ["plosive", "pair", "voiced"]
     },
     {
         symbol: "t",
-        audio: "",
+        audio: "PhT",
         type: "consonant",
         subType: ["plosive", "pair", "voiceless"]
     },
     {
         symbol: "d",
-        audio: "",
+        audio: "PhD",
         type: "consonant",
         subType: ["plosive", "pair", "voiced"]
     },
@@ -157,79 +157,79 @@ const phonemes = [
     },
     {
         symbol: "k",
-        audio: "",
+        audio: "PhK",
         type: "consonant",
         subType: ["plosive", "pair", "voiceless"]
     },
     {
         symbol: "g",
-        audio: "",
+        audio: "PhG",
         type: "consonant",
         subType: ["plosive", "pair", "voiced"]
     },
     {
         symbol: "f",
-        audio: "",
+        audio: "PhF",
         type: "consonant",
         subType: ["fricative", "pair", "voiceless"]
     },
     {
         symbol: "v",
-        audio: "",
+        audio: "PhV",
         type: "consonant",
         subType: ["fricative", "pair", "voiced"]
     },
     {
         symbol: "θ",
-        audio: "",
+        audio: "PhTHumb",
         type: "consonant",
         subType: ["fricative", "pair", "voiceless"]
     },
     {
         symbol: "ð",
-        audio: "",
+        audio: "PhmoTHer",
         type: "consonant",
         subType: ["fricative", "pair", "voiced"]
     },
     {
         symbol: "s",
-        audio: "",
+        audio: "PhS",
         type: "consonant",
         subType: ["fricative", "pair", "voiceless"]
     },
     {
         symbol: "z",
-        audio: "",
+        audio: "PhZ",
         type: "consonant",
         subType: ["fricative", "pair", "voiced"]
     },
     {
         symbol: "ʃ",
-        audio: "",
+        audio: "PhSH",
         type: "consonant",
         subType: ["fricative", "pair", "voiceless"]
     },
     {
         symbol: "ʒ",
-        audio: "",
+        audio: "PhZH",
         type: "consonant",
         subType: ["fricative", "pair", "voiced"]
     },
     {
         symbol: "m",
-        audio: "",
+        audio: "PhM",
         type: "consonant",
         subType: ["nasal", "voiced"]
     },
     {
         symbol: "n",
-        audio: "",
+        audio: "PhN",
         type: "consonant",
         subType: ["nasal", "voiced"]
     },
     {
         symbol: "ŋ",
-        audio: "",
+        audio: "PhNG",
         type: "consonant",
         subType: ["nasal", "voiced"]
     },
@@ -241,25 +241,25 @@ const phonemes = [
     },
     {
         symbol: "l",
-        audio: "",
+        audio: "PhL",
         type: "consonant",
         subType: ["approximant", "voiced"]
     },
     {
         symbol: "r",
-        audio: "",
+        audio: "PhR",
         type: "consonant",
         subType: ["approximant", "voiced"]
     },
     {
         symbol: "w",
-        audio: "",
+        audio: "PhW",
         type: "consonant",
         subType: ["approximant", "voiced"]
     },
     {
         symbol: "j",
-        audio: "",
+        audio: "PhY",
         type: "consonant",
         subType: ["approximant", "voiced"]
     }
