@@ -3,83 +3,86 @@
 .controlPanel {
     position: absolute;
     top: 0;
-    left: ($container-margin - $control-panel-width);
+    left: calc($container-margin - $control-panel-width);
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: $gap;
+    gap: calc($gap*2);
     width: $control-panel-width;
+    background-color: white;
 
-    @media screen and (max-width: 1000px) {
-        align-self: center;
-    }
+    // @media screen and (max-width: 1070px) {
+    //     left: 0;
+    //     top: calc($container-margin - $control-panel-width);
+    // }
 
-    & > div:nth-child(1),
-    & > div:nth-child(6) {
-        align-self: flex-start;
-
-        &.selected {
-            padding: 0 calc($button - 2px);
-        }
-    }
-
-    & > div:nth-child(13) {
-        align-self: start;
-    }
-
-    & > div:nth-child(12) {
-        &.selected {
-            padding: 0 calc($button - 2px);
-        }
-    }
-
-    & > div:nth-child(6),
-    & > div:nth-child(13) {
-        margin-top: $gap;
-    }
-
-    &_voicedCon {
-        display: flex;
-        gap: $padding;
-        align-self: center;
-    }
-
-    &_voiceless,
-    &_voiced {
+    &_vowels,
+    &_consonants {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        border: 1px solid black;
-        border-radius: calc($border-radius/2);
-        padding: 0 5px;
-        width: 4.5rem;
-        height: 2.5rem;
-    }
-
-    &_voiceless {
-        background-color: lighten(grey, 40%);
+        gap: $gap;
+        align-items: flex-end;
 
         & > div:nth-child(1) {
-            font-size: 0.9rem;
+            align-self: flex-start;
         }
 
-        & > div:nth-child(2) {
-            font-size: 0.8rem;
-            font-style: italic;
+        &.selected {
+            padding: 0 calc($button - 2px);
         }
     }
+
 
     &_voiced {
-        background-color: grey;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $gap;
 
-        & > div:nth-child(1) {
-            font-size: 0.9rem;
+        &_voicedCon {
+            display: flex;
+            gap: $padding;
+            align-self: center;
         }
 
-        & > div:nth-child(2) {
-            font-size: 0.8rem;
-            font-style: italic;
+        &_voiceless,
+        &_voiced {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            border: 1px solid black;
+            border-radius: calc($border-radius/2);
+            padding: 0 5px;
+            width: 4.5rem;
+            height: 2.5rem;
+        }
+
+        &_voiceless {
+            background-color: lighten(grey, 40%);
+    
+            & > div:nth-child(1) {
+                font-size: 0.9rem;
+            }
+    
+            & > div:nth-child(2) {
+                font-size: 0.8rem;
+                font-style: italic;
+            }
+        }
+    
+        &_voiced {
+            background-color: grey;
+    
+            & > div:nth-child(1) {
+                font-size: 0.9rem;
+            }
+    
+            & > div:nth-child(2) {
+                font-size: 0.8rem;
+                font-style: italic;
+            }
         }
     }
 }

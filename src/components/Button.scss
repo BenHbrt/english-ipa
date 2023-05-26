@@ -18,16 +18,19 @@
         &.Vowels {
             border-color: $vowels;
             border-width: $container-border;
+            padding: 0 calc($button - 2px);
         }
 
         &.Monothongs {
             border-color: $monothongs;
             border-width: $container-border;
+            padding: 0 calc($button - 2px);
         }
 
         &.Dipthongs {
             border-color: $dipthongs;
             border-width: $container-border;
+            padding: 0 calc($button - 2px);
         }
 
         &.Short {
@@ -43,11 +46,13 @@
         &.Consonants {
             border-color: $consonants;
             border-width: $container-border;
+            padding: 0 calc($button - 2px);
         }
 
         &.Pairs {
             border-color: $pair;
             border-width: $container-border;
+            padding: 0 calc($button - 2px);
         }
 
         &.Plosives {
