@@ -8,12 +8,10 @@
     flex-direction: column;
     gap: calc($gap*2);
     width: $control-panel-width;
-    background-color: white;
 
     @media screen and (max-width: 1070px) {
-        position: relative;
+        position: static;
         width: 100%;
-        left: 0;
     }
 
     &_vowels,
