@@ -35,19 +35,23 @@ const ControlPanel = () => {
         <div className="controlPanel">
             <div className="controlPanel_vowels">
                 <Button func={() => handleChange("vowels")} name={"vowels"} />
-                <Button func={() => setDisplay((prev) => {return {...prev, monothongs: !display.monothongs}})} name={"monothongs"} />
-                <Button func={() => setDisplay((prev) => {return {...prev, dipthongs: !display.dipthongs}})} name={"dipthongs"} />
-                <Button func={() => setDisplay((prev) => {return {...prev, short: !display.short}})} name={"short"} />
-                <Button func={() => setDisplay((prev) => {return {...prev, long: !display.long}})} name={"long"} />
+                <div>
+                    <Button func={() => setDisplay((prev) => {return {...prev, monothongs: !display.monothongs}})} name={"monothongs"} />
+                    <Button func={() => setDisplay((prev) => {return {...prev, dipthongs: !display.dipthongs}})} name={"dipthongs"} />
+                    <Button func={() => setDisplay((prev) => {return {...prev, short: !display.short}})} name={"short"} />
+                    <Button func={() => setDisplay((prev) => {return {...prev, long: !display.long}})} name={"long"} />
+                </div>
             </div>
             <div className="controlPanel_consonants">
                 <Button func={() => handleChange("consonants")} name={"consonants"} />
-                <Button func={() => setDisplay((prev) => {return {...prev, plosives: !display.plosives}})} name={"plosives"} />
-                <Button func={() => setDisplay((prev) => {return {...prev, fricatives: !display.fricatives}})} name={"fricatives"} />
-                <Button func={() => setDisplay((prev) => {return {...prev, affricates: !display.affricates}})} name={"affricates"} />
-                <Button func={() => setDisplay((prev) => {return {...prev, nasals: !display.nasals}})} name={"nasals"} />
-                <Button func={() => setDisplay((prev) => {return {...prev, approximants: !display.approximants}})} name={"approximants"} />
-                <Button func={() => setDisplay((prev) => {return {...prev, pairs: !display.pairs}})} name={"pairs"} />
+                <div>
+                    <Button func={() => setDisplay((prev) => {return {...prev, plosives: !display.plosives}})} name={"plosives"} />
+                    <Button func={() => setDisplay((prev) => {return {...prev, fricatives: !display.fricatives}})} name={"fricatives"} />
+                    <Button func={() => setDisplay((prev) => {return {...prev, affricates: !display.affricates}})} name={"affricates"} />
+                    <Button func={() => setDisplay((prev) => {return {...prev, nasals: !display.nasals}})} name={"nasals"} />
+                    <Button func={() => setDisplay((prev) => {return {...prev, approximants: !display.approximants}})} name={"approximants"} />
+                    <Button func={() => setDisplay((prev) => {return {...prev, pairs: !display.pairs}})} name={"pairs"} />
+                </div>
             </div>
             <div className="controlPanel_voiced">
                 <Button func={() => setDisplay((prev) => {return {...prev, voiced: !display.voiced}})} name={"voiced"} />

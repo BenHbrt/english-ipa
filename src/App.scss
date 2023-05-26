@@ -10,13 +10,6 @@
 .container {
     display: flex;
     justify-content: center;
-
-    @media screen and (max-width: 1000px) {
-        width: 100%;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
 }
 
 .chartContainer {
@@ -29,7 +22,7 @@
 .vowels {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 518px;
     border: $container-border solid transparent;
     border-radius: $border-radius;
     padding: $padding;
@@ -51,7 +44,7 @@
     width: $keyboard-container-width;
     background-color: white;
 
-    @media screen and (max-width: 1000px) {
-        align-self: center;
+    @media screen and (max-width: 1070px) {
+        position: relative;
     }
 }
