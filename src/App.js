@@ -29,7 +29,7 @@ export const DisplayContext = createContext({
 });
 
 export const ModeContext = createContext({
-  mode: "sound",
+  mode: {sound: true, keyboard: false},
   text: ""
 })
 
@@ -52,7 +52,7 @@ function App() {
   const displayValue = { display, setDisplay }
 
   const [mode, setMode] = useState({
-    mode: "sound",
+    mode: {sound: true, keyboard: false},
     text: ""
   })
   const modeValue = { mode, setMode }
@@ -61,7 +61,7 @@ function App() {
     <div className="App">
       <ModeContext.Provider value={modeValue}>
       <DisplayContext.Provider value={displayValue}>
-        <h1>English IPA</h1>
+        <h1>Phonemic Chart (British English)</h1>
         {/* <h2>Test 3</h2>
         <button onClick={playAudio}>Audio</button> */}
         
@@ -80,12 +80,13 @@ function App() {
           <div className="keyboardContainer">
             <ModeSelector />
             {
-              mode.mode === "keyboard" ? <Keyboard /> : null
+              mode.mode.keyboard ? <Keyboard /> : null
             }
           </div>
           
           
         </div>
+        <button onClick={() => console.log(mode.mode)}>Mode</button>
       </DisplayContext.Provider>
       </ModeContext.Provider>
     </div>

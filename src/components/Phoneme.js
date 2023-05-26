@@ -48,8 +48,18 @@ const Phoneme = ({ phoneme }) => {
         
     }
 
+    const clickHandler = () => {
+        if (mode.mode.sound) {
+            soundFunc()
+        }
+
+        if (mode.mode.keyboard) {
+            keyFunc()
+        }
+    }
+
     return (
-        <div className={`phoneme ${color}`} onClick={() => {if (mode.mode === "keyboard") {keyFunc()} else {soundFunc()}}}>
+        <div className={`phoneme ${color}`} onClick={clickHandler}>
             {phoneme.symbol}
         </div>
     )

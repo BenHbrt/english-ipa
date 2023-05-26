@@ -13,7 +13,7 @@ const Keyboard = () => {
 
     const reset = () => {
         setMode({
-            mode: "keyboard",
+            mode: { ...mode.mode },
             text: ""
         })
     }
@@ -26,7 +26,7 @@ const Keyboard = () => {
             newText = ""
         }
         setMode({
-            mode: "keyboard",
+            mode: { ...mode.mode },
             text: newText
         })
     }
@@ -43,7 +43,7 @@ const Keyboard = () => {
         } else {
             newText = "/" + symbol + "/"
         }
-        setMode({mode: mode.mode, text: newText})
+        setMode({mode: { ...mode.mode }, text: newText})
     }
 
     return (
