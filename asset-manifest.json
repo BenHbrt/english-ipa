@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/english-ipa/static/css/main.b0c87152.css",
-    "main.js": "/english-ipa/static/js/main.e1822a53.js",
+    "main.css": "/english-ipa/static/css/main.764abd91.css",
+    "main.js": "/english-ipa/static/js/main.d75df3d2.js",
     "static/media/PhAU.mp3": "/english-ipa/static/media/PhAU.dcc190ee7c06efc47742.mp3",
     "static/media/PhUp.mp3": "/english-ipa/static/media/PhUp.a1dbafa05071470c7f43.mp3",
     "static/media/PhmoTHer.mp3": "/english-ipa/static/media/PhmoTHer.7b429bf28b66566016d3.mp3",
@@ -47,11 +47,11 @@
     "static/media/PhfAr.mp3": "/english-ipa/static/media/PhfAr.78b775b34d5baa80d6d8.mp3",
     "static/media/PhdOOR.mp3": "/english-ipa/static/media/PhdOOR.0cae49acdcf21c7f7105.mp3",
     "index.html": "/english-ipa/index.html",
-    "main.b0c87152.css.map": "/english-ipa/static/css/main.b0c87152.css.map",
-    "main.e1822a53.js.map": "/english-ipa/static/js/main.e1822a53.js.map"
+    "main.764abd91.css.map": "/english-ipa/static/css/main.764abd91.css.map",
+    "main.d75df3d2.js.map": "/english-ipa/static/js/main.d75df3d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0c87152.css",
-    "static/js/main.e1822a53.js"
+    "static/css/main.764abd91.css",
+    "static/js/main.d75df3d2.js"
   ]
 }
