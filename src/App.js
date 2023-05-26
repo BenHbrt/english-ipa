@@ -66,27 +66,24 @@ function App() {
         <button onClick={playAudio}>Audio</button> */}
         
         <div className="container">
-          <ControlPanel />
           <div className="chartContainer">
-            <div className="chart">
-              <div className={`vowels ${display.vowels ? "vowelsLine" : ""}`}>
-                <Monothongs />
-                <Dipthongs />
-              </div>
-              <Consonants />
+            <ControlPanel />
+            <div className={`vowels ${display.vowels ? "vowelsLine" : ""}`}>
+              <Monothongs />
+              <Dipthongs />
             </div>
-            
+            <Consonants />
+            <div className="keyboardContainer">
+              <ModeSelector />
+              {
+                mode.mode.keyboard ? <Keyboard /> : null
+              }
+            </div>
           </div>
-          <div className="keyboardContainer">
-            <ModeSelector />
-            {
-              mode.mode.keyboard ? <Keyboard /> : null
-            }
-          </div>
+
           
           
         </div>
-        <button onClick={() => console.log(mode.mode)}>Mode</button>
       </DisplayContext.Provider>
       </ModeContext.Provider>
     </div>

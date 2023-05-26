@@ -10,7 +10,6 @@
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
 
     @media screen and (max-width: 1000px) {
         width: 100%;
@@ -21,23 +20,20 @@
 }
 
 .chartContainer {
-    align-self: flex-start;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
     @media screen and (max-width: 1000px) {
         align-self: center;
     }
 }
 
-.chart {
-    display: inline-block;
-}
-
 .vowels {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     border: $container-border solid transparent;
     border-radius: $border-radius;
     padding: $padding;
@@ -49,12 +45,14 @@
 }
 
 .keyboardContainer {
+    position: absolute;
+    top: 0;
+    right: calc($container-margin - $keyboard-container-width);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-self: flex-start;
-    width: 10rem;
-    margin-left: 2rem;
+    width: $keyboard-container-width;
 
     @media screen and (max-width: 1000px) {
         align-self: center;
