@@ -28,6 +28,11 @@
     padding: $padding;
     margin-bottom: $padding;
 
+    @media screen and (max-width: 540px) {
+        padding: calc($padding * $factor);
+        width: 363.333px;
+    }
+
     &.vowelsLine {
         border-color: $vowels;
     }

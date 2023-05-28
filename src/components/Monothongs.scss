@@ -10,6 +10,12 @@
     gap: calc(($padding * 3) + ($container-border * 2));
     width: calc(($container-border * 8) + ($padding * 11) + ($phoneme-dimensions * 4));
 
+    @media screen and (max-width: 540px) {
+        padding: calc($padding * $factor);
+        gap: calc(($padding * 3 * $factor) + ($container-border * 2));
+        width: calc(($container-border * 8) + ($padding * 11 * $factor) + ($phoneme-dimensions * 4 * $factor));
+    }
+
     &.monothongsLine {
         border-color: $monothongs;
     }
