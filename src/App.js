@@ -9,7 +9,6 @@ import Consonants from './components/Consonants';
 import ControlPanel from './components/ControlPanel';
 import ModeSelector from './components/ModeSelector';
 import Keyboard from './components/Keyboard';
-import Credits from './components/Credits';
 
 export const DisplayContext = createContext({
   display: {
@@ -35,8 +34,6 @@ export const ModeContext = createContext({
 })
 
 function App() {
-
-  const [feature, setFeature] = useState("chart")
 
   const [display, setDisplay] = useState({
     vowels: false,
@@ -69,7 +66,6 @@ function App() {
         <button onClick={playAudio}>Audio</button> */}
         
         <div className="container">
-        { feature === "chart" ? 
           <div className="chartContainer">
             <ControlPanel />
             <div className={`vowels ${display.vowels ? "vowelsLine" : ""}`}>
@@ -84,14 +80,6 @@ function App() {
               }
             </div>
           </div> 
-          :
-          null
-        }
-        { feature === "credits" ?
-          <Credits />
-          :
-          null
-        }
         </div>
       </DisplayContext.Provider>
       </ModeContext.Provider>
