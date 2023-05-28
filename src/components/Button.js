@@ -26,7 +26,13 @@ const Button = ({ name, func }) => {
         status = "selected"
     }
 
-    const capName = name.charAt(0).toUpperCase() + name.slice(1)
+    let capName = name.charAt(0).toUpperCase() + name.slice(1)
+
+    if (capName === "Monothongs") {
+        capName = "Monophthongs"
+    } else if (capName === "Dipthongs") {
+        capName = "Diphthongs"
+    }
 
     return (
         <div className={`button ${status} ${capName}`} onClick={() => {if (status !== "inactive") {func()}}}>
