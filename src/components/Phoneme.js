@@ -59,7 +59,7 @@ const Phoneme = ({ phoneme }) => {
     }
 
     return (
-        <div className={`phoneme ${color}`} onClick={clickHandler}>
+        <div className={`phoneme ${color} ${mode.mode.search ? "" : "pointer"}`} onClick={clickHandler}>
             {phoneme.symbol}
         </div>
     )

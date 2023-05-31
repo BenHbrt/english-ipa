@@ -16,7 +16,7 @@ const ModeButton = ({ name }) => {
             }
         })
         if (!isUnselected) {
-            if (name === "keyboard") {
+            if (name === "keyboard" || name === "search") {
                 newModeObj.mode.sound = true
             } else {
                 newModeObj.mode.keyboard = true

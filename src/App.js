@@ -10,6 +10,8 @@ import ControlPanel from './components/ControlPanel';
 import ModeSelector from './components/ModeSelector';
 import Keyboard from './components/Keyboard';
 
+const html = document.querySelector("html")
+
 export const DisplayContext = createContext({
   display: {
     vowels: false,
@@ -52,10 +54,16 @@ function App() {
   const displayValue = { display, setDisplay }
 
   const [mode, setMode] = useState({
-    mode: {sound: true, keyboard: false},
+    mode: {sound: true, keyboard: false, search: false},
     text: ""
   })
   const modeValue = { mode, setMode }
+
+  if (mode.mode.search) {
+    html.style.cursor = "help"
+  } else {
+    html.style.cursor = "auto"
+  }
 
   return (
     <div className="App">

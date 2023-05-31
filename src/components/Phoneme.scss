@@ -18,8 +18,11 @@
     }
 
     &:hover {
-        cursor: pointer;
         opacity: 0.5;
+    }
+
+    &.pointer:hover {
+        cursor: pointer; 
     }
 
 }

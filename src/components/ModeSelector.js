@@ -6,7 +6,8 @@ const ModeSelector = () => {
     return (
         <div className="modeSelector">
             <ModeButton name={"sound"} />
-            <ModeButton name={"keyboard"} />  
+            <ModeButton name={"keyboard"} />
+            <ModeButton name={"search"} />
         </div>
     )
 }
