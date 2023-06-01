@@ -3,8 +3,8 @@ import './App.scss';
 
 import { createContext, useState, useEffect } from 'react'
 
-import Monothongs from './components/Monothongs';
-import Dipthongs from './components/Dipthongs';
+import Monophthongs from './components/Monophthongs';
+import Diphthongs from './components/Diphthongs';
 import Consonants from './components/Consonants';
 import ControlPanel from './components/ControlPanel';
 import ModeSelector from './components/ModeSelector';
@@ -15,8 +15,8 @@ const html = document.querySelector("html")
 export const DisplayContext = createContext({
   display: {
     vowels: false,
-    monothongs: false,
-    dipthongs: false,
+    monophthongs: false,
+    diphthongs: false,
     short: false,
     long: false,
     consonants: false,
@@ -40,8 +40,8 @@ function App() {
 
   const [display, setDisplay] = useState({
     vowels: false,
-    monothongs: false,
-    dipthongs: false,
+    monophthongs: false,
+    diphthongs: false,
     short: false,
     long: false,
     consonants: false,
@@ -100,8 +100,8 @@ function App() {
           <div className="chartContainer">
             <ControlPanel />
             <div className={`vowels ${display.vowels ? "vowelsLine" : ""}`}>
-              <Monothongs />
-              <Dipthongs />
+              <Monophthongs />
+              <Diphthongs />
             </div>
             <Consonants />
             <div className="keyboardContainer">

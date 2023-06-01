@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-.monothongs {
+.monophthongs {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -16,7 +16,7 @@
         width: calc(($container-border * 8) + ($padding * 11 * $factor) + ($phoneme-dimensions * 4 * $factor));
     }
 
-    &.monothongsLine {
+    &.monophthongsLine {
         border-color: $monothongs;
     }
 }

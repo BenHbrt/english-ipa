@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-.dipthongs {
+.diphthongs {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -20,6 +20,6 @@
     }
 }
 
-.dipthongs.dipthongsLine {
+.diphthongs.diphthongsLine {
     border-color: $dipthongs;
 }

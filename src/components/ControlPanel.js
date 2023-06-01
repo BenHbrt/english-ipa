@@ -22,8 +22,8 @@ const ControlPanel = () => {
             setDisplay(newObj)
         } else if (key === "vowels") {
             const newObj = { ...display }
-            newObj.monothongs = false
-            newObj.dipthongs = false
+            newObj.monophthongs = false
+            newObj.diphthongs = false
             newObj.short = false
             newObj.long = false
             newObj.vowels = !display.vowels
@@ -36,8 +36,8 @@ const ControlPanel = () => {
             <div className="controlPanel_vowels">
                 <Button func={() => handleChange("vowels")} name={"vowels"} />
                 <div>
-                    <Button func={() => setDisplay((prev) => {return {...prev, monothongs: !display.monothongs}})} name={"monothongs"} />
-                    <Button func={() => setDisplay((prev) => {return {...prev, dipthongs: !display.dipthongs}})} name={"dipthongs"} />
+                    <Button func={() => setDisplay((prev) => {return {...prev, monophthongs: !display.monothongs}})} name={"monophthongs"} />
+                    <Button func={() => setDisplay((prev) => {return {...prev, diphthongs: !display.diphthongs}})} name={"diphthongs"} />
                     <Button func={() => setDisplay((prev) => {return {...prev, short: !display.short}})} name={"short"} />
                     <Button func={() => setDisplay((prev) => {return {...prev, long: !display.long}})} name={"long"} />
                 </div>

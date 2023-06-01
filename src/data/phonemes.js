@@ -2,76 +2,76 @@ const phonemes = [
     {
         symbol: "i:",
         audio: "PhshEEp",
-        type: "vowel",
+        type: "monophthong",
         subType: ["long", "voiced"]
     },
     {
         symbol: "ɪ",
         audio: "PhfIt",
-        type: "vowel",
+        type: "monophthong",
         subType: ["short", "voiced"]
     },
     {
         symbol: "ʊ",
         audio: "PhgOOd",
-        type: "vowel",
+        type: "monophthong",
         subType: ["short", "voiced"]
     },
     {
         symbol: "u:",
         audio: "PhglUE",
-        type: "vowel",
+        type: "monophthong",
         subType: ["long", "voiced"]
     },
     {
         symbol: "e",
         audio: "PhEgg",
-        type: "vowel",
+        type: "monophthong",
         subType: ["short", "voiced"]
     },
     {
         symbol: "ə",
         audio: "PhSCHWA",
-        type: "vowel",
+        type: "monophthong",
         subType: ["short", "voiced"]
     },
     {
         symbol: "ɜ:",
         audio: "PhbIrd",
-        type: "vowel",
+        type: "monophthong",
         subType: ["long", "voiced"]
     },
     {
         symbol: "ɔ:",
         audio: "PhdOOR",
-        type: "vowel",
+        type: "monophthong",
         subType: ["long", "voiced"],
         description: "long open-mid back rounded"
     },
     {
         symbol: "æ",
         audio: "PhcAt",
-        type: "vowel",
+        type: "monophthong",
         subType: ["short", "voiced"],
         description: "short near-open front unrounded"
     },
     {
         symbol: "ʌ",
         audio: "PhUp",
-        type: "vowel",
+        type: "monophthong",
         subType: ["short", "voiced"]
     },
     {
         symbol: "ɑ:",
         audio: "PhfAr",
-        type: "vowel",
+        type: "monophthong",
         subType: ["long", "voiced"],
         description: "long open back unrounded"
     },
     {
         symbol: "ɒ",
         audio: "PhdOg",
-        type: "vowel",
+        type: "monophthong",
         subType: ["short", "voiced"],
         description: "short open back rounded"
     },
@@ -295,24 +295,24 @@ const phonemes = [
     }
 ]
 
-export const getVowels = () => {
-    const vowels = []
+export const getMonophthongs = () => {
+    const monophthongs = []
     phonemes.forEach((item) => {
-        if (item.type === "vowel") {
-            vowels.push(item)
+        if (item.type === "monophthong") {
+            monophthongs.push(item)
         }
     })
-    return vowels
+    return monophthongs
 }
 
-export const getDipthongs = () => {
-    const dipthongs = []
+export const getDiphthongs = () => {
+    const diphthongs = []
     phonemes.forEach((item) => {
         if (item.type === "dipthong") {
-            dipthongs.push(item)
+            diphthongs.push(item)
         }
     })
-    return dipthongs
+    return diphthongs
 }
 
 export const getConsonants = () => {
