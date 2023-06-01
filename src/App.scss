@@ -55,3 +55,14 @@
         align-self: center;
     }
 }
+
+.description {
+    border: 1px solid black;
+    height: calc($button * 2);
+    padding: 0 $button;
+    border-radius: $button;
+    position: absolute;
+    background-color: antiquewhite;
+    opacity: 0.9;
+    z-index: 999;
+}

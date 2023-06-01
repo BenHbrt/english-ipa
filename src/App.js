@@ -1,7 +1,7 @@
 import './Global.scss'
 import './App.scss';
 
-import { createContext, useState } from 'react'
+import { createContext, useState, useEffect } from 'react'
 
 import Monothongs from './components/Monothongs';
 import Dipthongs from './components/Dipthongs';
@@ -32,7 +32,8 @@ export const DisplayContext = createContext({
 
 export const ModeContext = createContext({
   mode: {sound: true, keyboard: false},
-  text: ""
+  text: "",
+  description: ""
 })
 
 function App() {
@@ -55,24 +56,46 @@ function App() {
 
   const [mode, setMode] = useState({
     mode: {sound: true, keyboard: false, search: false},
-    text: ""
+    text: "",
+    description: ""
   })
   const modeValue = { mode, setMode }
 
+  const [mousePos, setMousePos] = useState({x: 0, y: 0})
+
   if (mode.mode.search) {
-    html.style.cursor = "help"
+    if (!html.classList.contains("search")) {
+      html.classList.toggle("search")
+    }
   } else {
-    html.style.cursor = "auto"
+    if (html.classList.contains("search")) {
+      html.classList.toggle("search")
+    }
   }
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      setMousePos({x: event.clientX, y: event.clientY})
+    }
+
+    window.addEventListener("mousemove", handleMouseMove)
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove)
+    }
+  }, [])
 
   return (
     <div className="App">
       <ModeContext.Provider value={modeValue}>
       <DisplayContext.Provider value={displayValue}>
         <h1>Phonemic Chart (British English)</h1>
-        {/* <h2>Test 3</h2>
-        <button onClick={playAudio}>Audio</button> */}
-        
+        {mode.description ?
+        <div className="description" style={{top: mousePos.y - 15, left: mousePos.x + 10}}>
+          {mode.description}
+        </div>
+        : null
+        }
         <div className="container">
           <div className="chartContainer">
             <ControlPanel />

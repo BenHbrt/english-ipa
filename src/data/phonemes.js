@@ -45,13 +45,15 @@ const phonemes = [
         symbol: "ɔ:",
         audio: "PhdOOR",
         type: "vowel",
-        subType: ["long", "voiced"]
+        subType: ["long", "voiced"],
+        description: "long open-mid back rounded"
     },
     {
         symbol: "æ",
         audio: "PhcAt",
         type: "vowel",
-        subType: ["short", "voiced"]
+        subType: ["short", "voiced"],
+        description: "short near-open front unrounded"
     },
     {
         symbol: "ʌ",
@@ -63,13 +65,15 @@ const phonemes = [
         symbol: "ɑ:",
         audio: "PhfAr",
         type: "vowel",
-        subType: ["long", "voiced"]
+        subType: ["long", "voiced"],
+        description: "long open back unrounded"
     },
     {
         symbol: "ɒ",
         audio: "PhdOg",
         type: "vowel",
-        subType: ["short", "voiced"]
+        subType: ["short", "voiced"],
+        description: "short open back rounded"
     },
     {
         symbol: "ɪə",
@@ -123,145 +127,171 @@ const phonemes = [
         symbol: "p",
         audio: "PhP",
         type: "consonant",
-        subType: ["plosive", "pair", "voiceless"]
+        subType: ["plosive", "pair", "voiceless"],
+        description: "voiceless bilabial plosive"
     },
     {
         symbol: "b",
         audio: "PhB",
         type: "consonant",
-        subType: ["plosive", "pair", "voiced"]
+        subType: ["plosive", "pair", "voiced"],
+        description: "voiced bilabial plosive"
     },
     {
         symbol: "t",
         audio: "PhT",
         type: "consonant",
-        subType: ["plosive", "pair", "voiceless"]
+        subType: ["plosive", "pair", "voiceless"],
+        description: "voiceless alveolar plosive"
     },
     {
         symbol: "d",
         audio: "PhD",
         type: "consonant",
-        subType: ["plosive", "pair", "voiced"]
+        subType: ["plosive", "pair", "voiced"],
+        description: "voiced alveolar plosive"
     },
     {
         symbol: "ʧ",
         audio: "PhCH",
         type: "consonant",
-        subType: ["affricate", "pair", "voiceless"]
+        subType: ["affricate", "pair", "voiceless"],
+        description: "voiceless palato-alveolar affricate"
     },
     {
         symbol: "ʤ",
         audio: "PhDZ",
         type: "consonant",
-        subType: ["affricate", "pair", "voiced"]
+        subType: ["affricate", "pair", "voiced"],
+        description: "voiced palato-alveolar affricate"
     },
     {
         symbol: "k",
         audio: "PhK",
         type: "consonant",
-        subType: ["plosive", "pair", "voiceless"]
+        subType: ["plosive", "pair", "voiceless"],
+        description: "voiceless velar plosive"
     },
     {
         symbol: "g",
         audio: "PhG",
         type: "consonant",
-        subType: ["plosive", "pair", "voiced"]
+        subType: ["plosive", "pair", "voiced"],
+        description: "voiced velar plosive"
     },
     {
         symbol: "f",
         audio: "PhF",
         type: "consonant",
-        subType: ["fricative", "pair", "voiceless"]
+        subType: ["fricative", "pair", "voiceless"],
+        description: "voiceless labiodental fricative"
     },
     {
         symbol: "v",
         audio: "PhV",
         type: "consonant",
-        subType: ["fricative", "pair", "voiced"]
+        subType: ["fricative", "pair", "voiced"],
+        description: "voiced labiodental fricative"
     },
     {
         symbol: "θ",
         audio: "PhTHumb",
         type: "consonant",
-        subType: ["fricative", "pair", "voiceless"]
+        subType: ["fricative", "pair", "voiceless"],
+        description: "voiceless dental fricative"
+        
     },
     {
         symbol: "ð",
         audio: "PhmoTHer",
         type: "consonant",
-        subType: ["fricative", "pair", "voiced"]
+        subType: ["fricative", "pair", "voiced"],
+        description: "voiced dental fricative"
     },
     {
         symbol: "s",
         audio: "PhS",
         type: "consonant",
-        subType: ["fricative", "pair", "voiceless"]
+        subType: ["fricative", "pair", "voiceless"],
+        description: "voiceless alveolar fricative"
     },
     {
         symbol: "z",
         audio: "PhZ",
         type: "consonant",
-        subType: ["fricative", "pair", "voiced"]
+        subType: ["fricative", "pair", "voiced"],
+        description: "voiced alveolar fricative"
     },
     {
         symbol: "ʃ",
         audio: "PhSH",
         type: "consonant",
-        subType: ["fricative", "pair", "voiceless"]
+        subType: ["fricative", "pair", "voiceless"],
+        description: "voiceless palato-alveolar fricative"
     },
     {
         symbol: "ʒ",
         audio: "PhZH",
         type: "consonant",
-        subType: ["fricative", "pair", "voiced"]
+        subType: ["fricative", "pair", "voiced"],
+        description: "voiced palato-alveolar fricative"
     },
     {
         symbol: "m",
         audio: "PhM",
         type: "consonant",
-        subType: ["nasal", "voiced"]
+        subType: ["nasal", "voiced"],
+        description: "voiced bilabial nasal"
     },
     {
         symbol: "n",
         audio: "PhN",
         type: "consonant",
-        subType: ["nasal", "voiced"]
+        subType: ["nasal", "voiced"],
+        description: "voiced alveolar nasal"
     },
     {
         symbol: "ŋ",
         audio: "PhNG",
         type: "consonant",
-        subType: ["nasal", "voiced"]
+        subType: ["nasal", "voiced"],
+        description: "voiced velar nasal"
     },
     {
         symbol: "h",
         audio: "PhH",
         type: "consonant",
-        subType: ["fricative", "voiceless"]
+        subType: ["fricative", "voiceless"],
+        description: "voiceless glottal fricative"
+
     },
     {
         symbol: "l",
         audio: "PhL",
         type: "consonant",
-        subType: ["approximant", "voiced"]
+        subType: ["approximant", "voiced"],
+        description: "voiced alveolar lateral approximant"
     },
     {
         symbol: "r",
         audio: "PhR",
         type: "consonant",
-        subType: ["approximant", "voiced"]
+        subType: ["approximant", "voiced"],
+        description: "voiced postalveolar approximant"
     },
     {
         symbol: "w",
         audio: "PhW",
         type: "consonant",
-        subType: ["approximant", "voiced"]
+        subType: ["approximant", "voiced"],
+        description: "voiced labial-velar approximant"
     },
     {
         symbol: "j",
         audio: "PhY",
         type: "consonant",
-        subType: ["approximant", "voiced"]
+        subType: ["approximant", "voiced"],
+        description: "voiced palatal approximant"
     }
 ]
 

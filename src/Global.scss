@@ -15,4 +15,9 @@ body {
     user-select: none;
     font-family: Arial, Helvetica, sans-serif;
     background-color: antiquewhite;
+    min-height: 100%;
+}
+
+html.search {
+    cursor: url('./img/search_cursor.png'), help;
 }

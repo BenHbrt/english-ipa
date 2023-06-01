@@ -7,4 +7,10 @@
     @media screen and (max-width: 1070px) {
         margin-left: $gap;
     }
+
+    & > div:nth-child(3) {
+        @media screen and (max-width: 540px) {
+            display: none;
+        }   
+    }
 }

@@ -58,8 +58,23 @@ const Phoneme = ({ phoneme }) => {
         }
     }
 
+    const handleMouseEnter = () => {
+        if (mode.mode.search) {
+            setMode({mode: mode.mode, text: mode.text, description: phoneme.description})
+        } 
+    }
+
+    const handleMouseLeave = () => {
+        if (mode.mode.search) {
+            setMode({mode: mode.mode, text: mode.text, description: ""})
+        }
+    }
+
     return (
-        <div className={`phoneme ${color} ${mode.mode.search ? "" : "pointer"}`} onClick={clickHandler}>
+        <div className={`phoneme ${color} ${mode.mode.search ? "" : "pointer"}`}
+        onClick={clickHandler}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}>
             {phoneme.symbol}
         </div>
     )
