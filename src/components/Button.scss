@@ -90,6 +90,18 @@
             border-width: $container-border;
             padding: 0 calc($button - 2px);
         }
+
+        &.Bilabial,
+        &.Alveolar,
+        &.Palato-alveolar,
+        &.Velar,
+        &.Labio-dental,
+        &.Dental,
+        &.Glottal,
+        &.Postalveolar,
+        &.Palatal {
+            background-color: $place;
+        }
     }
 }
 

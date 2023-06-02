@@ -25,6 +25,9 @@
         cursor: pointer; 
     }
 
+    &.flash {
+        background-color: $place;
+    }
 }
 
 .fricative {
@@ -73,4 +76,8 @@
 
 .voiceless {
     background-color: lighten(grey, 40%);
+}
+
+.voiceless.flash {
+    background-color: lighten($fricative, 35%);
 }

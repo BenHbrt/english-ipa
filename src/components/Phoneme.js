@@ -34,6 +34,28 @@ const Phoneme = ({ phoneme }) => {
         color = "voiced"
     }
 
+    let flash = false
+    if (display.bilabial && phoneme.subType.includes("bilabial")) {
+        flash = true
+    } else if (display.alveolar && phoneme.subType.includes("alveolar")) {
+        flash = true
+    } else if (display.palatoalveolar && phoneme.subType.includes("palato-alveolar")) {
+        flash = true
+    } else if (display.velar && phoneme.subType.includes("velar")) {
+        flash = true
+    } else if (display.labiodental && phoneme.subType.includes("labio-dental")) {
+        flash = true
+    } else if (display.dental && phoneme.subType.includes("dental")) {
+        flash = true
+    }  else if (display.glottal && phoneme.subType.includes("glottal")) {
+        flash = true
+    } else if (display.postalveolar && phoneme.subType.includes("postalveolar")) {
+        flash = true
+    } else if (display.palatal && phoneme.subType.includes("palatal")) {
+        flash = true
+    }
+    
+
     const keyFunc = () => {
         let newText = mode.text
         if (mode.text.length) {
@@ -73,7 +95,7 @@ const Phoneme = ({ phoneme }) => {
     }
 
     return (
-        <div className={`phoneme ${color} ${mode.mode.search ? "" : "pointer"}`}
+        <div className={`phoneme ${color} ${mode.mode.search ? "" : "pointer"} ${flash ? "flash" : ""}`}
         onClick={clickHandler}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>

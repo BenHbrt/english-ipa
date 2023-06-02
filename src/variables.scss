@@ -7,7 +7,8 @@ $gap: 0.4rem;
 $button: 10px;
 $container-margin: -2rem;
 $keyboard-container-width: 15rem;
-$control-panel-width: 10rem;
+$control-panel-width: 17rem;
+$control-panel-width-vowels: 10rem;
 
 // Line Colors
 $vowels: red;
@@ -26,6 +27,12 @@ $nasal: purple;
 $voiced: grey;
 $short: yellow;
 $long: darkorange;
+$place: blue;
 
 // Responsive Dimensions -Phonemes
 $factor: calc(2/3);
+
+// Animation
+$time: 2s;
+$mode: linear;
+$duration: infinite;

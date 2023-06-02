@@ -3,11 +3,14 @@ import './Button.scss'
 import { useContext } from 'react'
 import { DisplayContext } from '../App'
 
+export const places = ["bilabial", "labiodental", "dental", "alveolar", "palatoalveolar", "postalveolar", "palatal", "velar", "glottal"]
+
 const Button = ({ name, func }) => {
 
     const { display } = useContext(DisplayContext)
     const vowelParts = ["monophthongs", "diphthongs", "short", "long"]
     const consonantParts = ["fricatives", "affricates", "plosives", "pairs", "nasals", "approximants", "semivowels"]
+    
 
     let status = ""
     if (display[name] === true && (name === "vowels" || name === "consonants")) {
@@ -16,11 +19,11 @@ const Button = ({ name, func }) => {
         status = "main"
     } else if (vowelParts.includes(name) && display.vowels === false) {
         status = "inactive"
-    } else if (consonantParts.includes(name) && display.consonants === false) {
+    } else if ((consonantParts.includes(name) || places.includes(name)) && display.consonants === false) {
         status = "inactive"
     } else if (vowelParts.includes(name) && display.vowels === true && display[name] === true) {
         status = "selected"
-    } else if (consonantParts.includes(name) && display.consonants === true && display[name] === true) {
+    } else if ((consonantParts.includes(name) || places.includes(name)) && display.consonants === true && display[name] === true) {
         status = "selected"
     } else if (name === "voiced" && display[name] === true) {
         status = "selected"
@@ -29,6 +32,10 @@ const Button = ({ name, func }) => {
     let capName = name.charAt(0).toUpperCase() + name.slice(1)
     if (capName === "Semivowels") {
         capName = "Semi-vowels"
+    } else if (capName === "Labiodental") {
+        capName = "Labio-dental"
+    } else if (capName === "Palatoalveolar") {
+        capName = "Palato-alveolar"
     }
 
     return (

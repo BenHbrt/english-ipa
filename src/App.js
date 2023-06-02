@@ -26,7 +26,16 @@ export const DisplayContext = createContext({
     affricates: false,
     nasals: false,
     approximants: false,
-    semivowels: false
+    semivowels: false,
+    bilabial: false,
+    labiodental: false,
+    dental: false,
+    alveolar: false,
+    palatoalveolar: false,
+    postalveolar: false,
+    palatal: false,
+    velar: false,
+    glottal: false
   },
   setDisplay: () => {}
 });
@@ -52,7 +61,16 @@ function App() {
     affricates: false,
     nasals: false,
     approximants: false,
-    semivowels: false
+    semivowels: false,
+    bilabial: false,
+    labiodental: false,
+    dental: false,
+    alveolar: false,
+    palatoalveolar: false,
+    postalveolar: false,
+    palatal: false,
+    velar: false,
+    glottal: false
   })
   const displayValue = { display, setDisplay }
 

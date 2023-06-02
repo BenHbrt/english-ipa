@@ -9,17 +9,20 @@
     gap: calc($gap*2);
     width: $control-panel-width;
 
-    @media screen and (max-width: 1070px) {
+    @media screen and (max-width: 1140px) {
         position: static;
         width: 100%;
     }
 
-    &_vowels,
-    &_consonants {
-        width: 100%;
+    &_vowels {
+        width: $control-panel-width-vowels;
         display: flex;
         flex-direction: column;
         gap: $gap;
+
+        @media screen and (max-width: 1140px) {
+            width: 100%;
+        }
 
         & > div:nth-child(1) {
             align-self: flex-start;
@@ -31,7 +34,7 @@
             gap: $gap;
             align-items: flex-end;
 
-            @media screen and (max-width: 1070px) {
+            @media screen and (max-width: 1140px) {
                 flex-direction: row;
                 flex-wrap: wrap;
                 margin-right: $gap;
@@ -42,10 +45,48 @@
             padding: 0 calc($button - 2px);
         }
 
-        @media screen and (max-width: 1070px) {
-            flex-direction: row;
+        @media screen and (max-width: 1140px) {
+            flex-direction: column;
             margin-left: $gap;
         }
+
+    }
+
+    &_consonants {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: $gap;
+        margin: 0 $gap;
+
+        & > div:nth-child(1) {
+            align-self: flex-start;
+        }
+
+        &_container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: calc($gap * 2);
+
+            @media screen and (max-width: 1140px) {
+                flex-direction: column;
+            }
+
+            & > div {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: $gap;
+
+                @media screen and (max-width: 1140px) {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: $gap;
+                }
+            }
+        }
+
     }
 
     &_voiced {
@@ -55,7 +96,7 @@
         align-items: flex-start;
         gap: $gap;
 
-        @media screen and (max-width: 1070px) {
+        @media screen and (max-width: 1140px) {
             flex-direction: row;
             margin-left: $gap;
             margin-bottom: $gap;
@@ -66,7 +107,7 @@
             gap: $padding;
             align-self: center;
 
-            @media screen and (max-width: 1070px) {
+            @media screen and (max-width: 1140px) {
                 margin-left: calc($gap*2);
             }
         }
@@ -83,7 +124,7 @@
             width: 4.5rem;
             height: 2.5rem;
 
-            @media screen and (max-width: 1070px) {
+            @media screen and (max-width: 1140px) {
                 flex-direction: row;
                 width: auto;
                 gap: $gap;

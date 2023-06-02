@@ -48,7 +48,7 @@
     align-self: flex-start;
     width: $keyboard-container-width;
 
-    @media screen and (max-width: 1070px) {
+    @media screen and (max-width: 1140px) {
         position: static;
         flex-direction: row;
         width: 100%;
