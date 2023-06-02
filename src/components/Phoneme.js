@@ -24,6 +24,8 @@ const Phoneme = ({ phoneme }) => {
         color = "short"
     } else if (display.long && phoneme.subType.includes("long")) {
         color = "long"
+    } else if (display.approximants && phoneme.subType.includes("lateral approximant")) {
+        color = "approximant"
     }
 
     if (display.voiced === true && phoneme.subType.includes("voiceless")) {
@@ -60,7 +62,7 @@ const Phoneme = ({ phoneme }) => {
 
     const handleMouseEnter = () => {
         if (mode.mode.search) {
-            setMode({mode: mode.mode, text: mode.text, description: phoneme.description})
+            setMode({mode: mode.mode, text: mode.text, description: phoneme.type === "consonant" ? phoneme.subType.join(" ") : ""})
         } 
     }
 

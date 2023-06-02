@@ -18,6 +18,7 @@ const ControlPanel = () => {
             newObj.affricates = false
             newObj.nasals = false
             newObj.approximants = false
+            newObj.semivowels = false
             newObj.consonants = !display.consonants
             setDisplay(newObj)
         } else if (key === "vowels") {
@@ -50,6 +51,7 @@ const ControlPanel = () => {
                     <Button func={() => setDisplay((prev) => {return {...prev, affricates: !display.affricates}})} name={"affricates"} />
                     <Button func={() => setDisplay((prev) => {return {...prev, nasals: !display.nasals}})} name={"nasals"} />
                     <Button func={() => setDisplay((prev) => {return {...prev, approximants: !display.approximants}})} name={"approximants"} />
+                    <Button func={() => setDisplay((prev) => {return {...prev, semivowels: !display.semivowels}})} name={"semivowels"} />
                     <Button func={() => setDisplay((prev) => {return {...prev, pairs: !display.pairs}})} name={"pairs"} />
                 </div>
             </div>

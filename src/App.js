@@ -25,7 +25,8 @@ export const DisplayContext = createContext({
     fricatives: false,
     affricates: false,
     nasals: false,
-    approximants: false
+    approximants: false,
+    semivowels: false
   },
   setDisplay: () => {}
 });
@@ -50,7 +51,8 @@ function App() {
     fricatives: false,
     affricates: false,
     nasals: false,
-    approximants: false
+    approximants: false,
+    semivowels: false
   })
   const displayValue = { display, setDisplay }
 

@@ -17,7 +17,8 @@
         width: calc(($container-border * 2) + (86.6667px * 4) + ($padding * $factor * 5));
     }
 
-    &_pair {
+    &_pair,
+    &_semivowels {
         display: flex;
         border: $container-border solid transparent;
         border-radius: $border-radius;
@@ -27,6 +28,17 @@
         @media screen and (max-width: 540px) {
             padding: calc($padding * $factor);
             gap: calc(($padding * 3 * $factor) + ($container-border * 2)); 
+        }
+    }
+
+    &_semivowels {
+        margin: calc($gap * -1);
+        height: 59.4667px;
+
+        @media screen and (max-width: 540px) {
+            padding: calc($padding * $factor);
+            gap: calc(($padding * 3 * $factor) + ($container-border * 2)); 
+            height: 42.2667px;
         }
     }
 

@@ -21,14 +21,14 @@
             padding: 0 calc($button - 2px);
         }
 
-        &.Monothongs {
-            border-color: $monothongs;
+        &.Monophthongs {
+            border-color: $monophthongs;
             border-width: $container-border;
             padding: 0 calc($button - 2px);
         }
 
-        &.Dipthongs {
-            border-color: $dipthongs;
+        &.Diphthongs {
+            border-color: $diphthongs;
             border-width: $container-border;
             padding: 0 calc($button - 2px);
         }
@@ -83,6 +83,12 @@
         &.Voiced {
             border-color: $voiced;
             background-color: $voiced;
+        }
+
+        &.Semi-vowels {
+            border-color: $semivowel;
+            border-width: $container-border;
+            padding: 0 calc($button - 2px);
         }
     }
 }

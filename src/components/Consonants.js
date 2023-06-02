@@ -56,8 +56,10 @@ const Consonants = () => {
             <div className="consonants_approximant">
                 <Phoneme phoneme={consonants[20]} />
                 <Phoneme phoneme={consonants[21]} />
-                <Phoneme phoneme={consonants[22]} />
-                <Phoneme phoneme={consonants[23]} />
+                <div className="consonants_semivowels" style={{borderColor: `${display.semivowels ? "brown" : "transparent"}`}}>
+                    <Phoneme phoneme={consonants[22]} />
+                    <Phoneme phoneme={consonants[23]} />
+                </div>
             </div>
         </div>
     )

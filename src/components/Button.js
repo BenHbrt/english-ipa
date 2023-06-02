@@ -7,7 +7,7 @@ const Button = ({ name, func }) => {
 
     const { display } = useContext(DisplayContext)
     const vowelParts = ["monophthongs", "diphthongs", "short", "long"]
-    const consonantParts = ["fricatives", "affricates", "plosives", "pairs", "nasals", "approximants"]
+    const consonantParts = ["fricatives", "affricates", "plosives", "pairs", "nasals", "approximants", "semivowels"]
 
     let status = ""
     if (display[name] === true && (name === "vowels" || name === "consonants")) {
@@ -27,6 +27,9 @@ const Button = ({ name, func }) => {
     }
 
     let capName = name.charAt(0).toUpperCase() + name.slice(1)
+    if (capName === "Semivowels") {
+        capName = "Semi-vowels"
+    }
 
     return (
         <div className={`button ${status} ${capName}`} onClick={() => {if (status !== "inactive") {func()}}}>
