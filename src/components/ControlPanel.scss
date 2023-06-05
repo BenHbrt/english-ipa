@@ -102,6 +102,11 @@
             margin-bottom: $gap;
         }
 
+        &_buttons {
+            display: flex;
+            gap: $gap;
+        }
+
         &_voicedCon {
             display: flex;
             gap: $padding;

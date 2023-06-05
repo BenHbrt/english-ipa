@@ -2,7 +2,7 @@ import './ControlPanel.scss'
 
 import { useContext } from 'react'
 import { DisplayContext } from '../App'
-import { places } from './Button'
+import { consonantParts, places } from '../data/groups'
 
 import Button from './Button'
 
@@ -42,16 +42,25 @@ const ControlPanel = () => {
         }
     }
 
-    const handlePlace = (place) => {
+    const handlePlace = (consonantFeature) => {
         const newObj = { ...display }
-        Object.keys(newObj).forEach((key) => {
-            if (places.includes(key)) {
-                newObj[key] = false
-            }
-            newObj[place] = !display[place]
-        })
-
-        // setDisplay((prev) => {return {...prev, [place]: !display[place]}})
+        if (places.includes(consonantFeature)) {
+            Object.keys(newObj).forEach((key) => {
+                if (consonantParts.includes(key)) {
+                    newObj[key] = false
+                }
+                newObj[consonantFeature] = !display[consonantFeature]
+            })
+        } else if (consonantParts.includes(consonantFeature)) {
+            Object.keys(newObj).forEach((key) => {
+                if (places.includes(key)) {
+                    newObj[key] = false
+                }
+                newObj[consonantFeature] = !display[consonantFeature]
+            })
+        } else {
+            newObj[consonantFeature] = !display[consonantFeature]
+        }
         setDisplay(newObj)
     }
 
@@ -81,18 +90,21 @@ const ControlPanel = () => {
                         <Button func={() => handlePlace("glottal")} name={"glottal"} />
                     </div>
                     <div>
-                        <Button func={() => setDisplay((prev) => {return {...prev, plosives: !display.plosives}})} name={"plosives"} />
-                        <Button func={() => setDisplay((prev) => {return {...prev, fricatives: !display.fricatives}})} name={"fricatives"} />
-                        <Button func={() => setDisplay((prev) => {return {...prev, affricates: !display.affricates}})} name={"affricates"} />
-                        <Button func={() => setDisplay((prev) => {return {...prev, nasals: !display.nasals}})} name={"nasals"} />
-                        <Button func={() => setDisplay((prev) => {return {...prev, approximants: !display.approximants}})} name={"approximants"} />
-                        <Button func={() => setDisplay((prev) => {return {...prev, semivowels: !display.semivowels}})} name={"semivowels"} />
-                        <Button func={() => setDisplay((prev) => {return {...prev, pairs: !display.pairs}})} name={"pairs"} />
+                        <Button func={() => handlePlace("plosives")} name={"plosives"} />
+                        <Button func={() => handlePlace("fricatives")} name={"fricatives"} />
+                        <Button func={() => handlePlace("affricates")} name={"affricates"} />
+                        <Button func={() => handlePlace("nasals")} name={"nasals"} />
+                        <Button func={() => handlePlace("approximants")} name={"approximants"} />
+                        <Button func={() => handlePlace("semivowels")} name={"semivowels"} />
+                        
                     </div>
                 </div>
             </div>
             <div className="controlPanel_voiced">
-                <Button func={() => setDisplay((prev) => {return {...prev, voiced: !display.voiced}})} name={"voiced"} />
+                <div className="controlPanel_voiced_buttons">
+                    <Button func={() => setDisplay((prev) => {return {...prev, voiced: !display.voiced}})} name={"voiced"} />
+                    <Button func={() => handlePlace("pairs")} name={"pairs"} />
+                </div>
                 <div className="controlPanel_voiced_voicedCon" style={{visibility: `${display.voiced ? "visible" : "hidden"}`}}>
                     <div className="controlPanel_voiced_voiceless">
                         <div>voiceless</div>
@@ -104,7 +116,6 @@ const ControlPanel = () => {
                     </div>
                 </div>
             </div>
-            <button onClick={() => console.table(display)}>Obj</button>
         </div>
     )
 }
