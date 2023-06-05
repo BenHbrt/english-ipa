@@ -24,10 +24,6 @@
     &.pointer:hover {
         cursor: pointer; 
     }
-
-    &.flash {
-        background-color: $place;
-    }
 }
 
 .fricative {
@@ -78,6 +74,38 @@
     background-color: lighten(grey, 40%);
 }
 
-.voiceless.flash {
-    background-color: lighten($fricative, 35%);
+.bilabial {
+    background-color: $bilabial;
+}
+
+.labiodental {
+    background-color: $labiodental;
+}
+
+.dental {
+    background-color: $dental;
+}
+
+.alveolar {
+    background-color: $alveolar;
+}
+
+.palatoalveolar {
+    background-color: $palatoalveolar;
+}
+
+.postalveolar {
+    background-color: $postalveolar;
+}
+
+.palatal {
+    background-color: $palatal;
+}
+
+.velar {
+    background-color: $velar;
+}
+
+.glottal {
+    background-color: $glottal;
 }

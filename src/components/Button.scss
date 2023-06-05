@@ -91,16 +91,49 @@
             padding: 0 calc($button - 2px);
         }
 
-        &.Bilabial,
-        &.Alveolar,
-        &.Palato-alveolar,
-        &.Velar,
-        &.Labio-dental,
-        &.Dental,
-        &.Glottal,
-        &.Postalveolar,
+        &.Bilabial {
+            border-color: $bilabial;
+            background-color: $bilabial;
+        }
+
+        &.Alveolar {
+            border-color: $alveolar;
+            background-color: $alveolar;
+        }
+
+        &.Palato-alveolar {
+            border-color: $palatoalveolar;
+            background-color: $palatoalveolar;
+        }
+
+        &.Velar {
+            border-color: $velar;
+            background-color: $velar;
+        }
+
+        &.Labio-dental {
+            border-color: $labiodental;
+            background-color: $labiodental;
+        }
+
+        &.Dental {
+            border-color: $dental;
+            background-color: $dental;
+        }
+
+        &.Glottal {
+            border-color: $glottal;
+            background-color: $glottal;
+        }
+
+        &.Postalveolar {
+            border-color: $postalveolar;
+            background-color: $postalveolar;
+        }
+
         &.Palatal {
-            background-color: $place;
+            border-color: $palatal;
+            background-color: $palatal;
         }
     }
 }

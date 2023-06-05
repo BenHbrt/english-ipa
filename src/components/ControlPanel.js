@@ -50,6 +50,7 @@ const ControlPanel = () => {
                     newObj[key] = false
                 }
                 newObj[consonantFeature] = !display[consonantFeature]
+                newObj.voiced = false
             })
         } else if (consonantParts.includes(consonantFeature)) {
             Object.keys(newObj).forEach((key) => {
@@ -57,10 +58,28 @@ const ControlPanel = () => {
                     newObj[key] = false
                 }
                 newObj[consonantFeature] = !display[consonantFeature]
+                newObj.voiced = false
             })
+        } else if (consonantFeature === "voiced") {
+            Object.keys(newObj).forEach((key) => {
+                newObj[key] = false
+            })
+            newObj[consonantFeature] = !display[consonantFeature]
+            newObj["pairs"] = display["pairs"]
+            newObj.consonants = display.consonants
+            newObj.vowels = display.vowels
+            newObj.monophthongs = display.monophthongs
+            newObj.diphthongs = display.diphthongs
         } else {
             newObj[consonantFeature] = !display[consonantFeature]
         }
+        setDisplay(newObj)
+    }
+
+    const handleVowels = (input) => {
+        const newObj = { ...display }
+        newObj.voiced = false
+        newObj[input] = !display.input
         setDisplay(newObj)
     }
 
@@ -71,8 +90,8 @@ const ControlPanel = () => {
                 <div>
                     <Button func={() => setDisplay((prev) => {return {...prev, monophthongs: !display.monothongs}})} name={"monophthongs"} />
                     <Button func={() => setDisplay((prev) => {return {...prev, diphthongs: !display.diphthongs}})} name={"diphthongs"} />
-                    <Button func={() => setDisplay((prev) => {return {...prev, short: !display.short}})} name={"short"} />
-                    <Button func={() => setDisplay((prev) => {return {...prev, long: !display.long}})} name={"long"} />
+                    <Button func={() => handleVowels("short")} name={"short"} />
+                    <Button func={() => handleVowels("long")} name={"long"} />
                 </div>
             </div>
             <div className="controlPanel_consonants">
@@ -102,7 +121,7 @@ const ControlPanel = () => {
             </div>
             <div className="controlPanel_voiced">
                 <div className="controlPanel_voiced_buttons">
-                    <Button func={() => setDisplay((prev) => {return {...prev, voiced: !display.voiced}})} name={"voiced"} />
+                    <Button func={() => handlePlace("voiced")} name={"voiced"} />
                     <Button func={() => handlePlace("pairs")} name={"pairs"} />
                 </div>
                 <div className="controlPanel_voiced_voicedCon" style={{visibility: `${display.voiced ? "visible" : "hidden"}`}}>

@@ -10,6 +10,8 @@ const Phoneme = ({ phoneme }) => {
     const { display } = useContext(DisplayContext)
     const { mode, setMode } = useContext(ModeContext)
 
+    let flash = true
+
     if (display.fricatives && phoneme.subType.includes("fricative")) {
         color = "fricative"
     } else if (display.plosives && phoneme.subType.includes("plosive")) {
@@ -26,6 +28,24 @@ const Phoneme = ({ phoneme }) => {
         color = "long"
     } else if (display.approximants && phoneme.subType.includes("lateral approximant")) {
         color = "approximant"
+    } else if (display.bilabial && phoneme.subType.includes("bilabial")) {
+        color = "bilabial"
+    } else if (display.alveolar && phoneme.subType.includes("alveolar")) {
+        color = "alveolar"
+    } else if (display.palatoalveolar && phoneme.subType.includes("palato-alveolar")) {
+        color = "palatoalveolar"
+    } else if (display.velar && phoneme.subType.includes("velar")) {
+        color = "velar"
+    } else if (display.labiodental && phoneme.subType.includes("labio-dental")) {
+        color = "labiodental"
+    } else if (display.dental && phoneme.subType.includes("dental")) {
+        color = "dental"
+    }  else if (display.glottal && phoneme.subType.includes("glottal")) {
+        color = "glottal"
+    } else if (display.postalveolar && phoneme.subType.includes("postalveolar")) {
+        color = "postalveolar"
+    } else if (display.palatal && phoneme.subType.includes("palatal")) {
+        color = "palatal"
     }
 
     if (display.voiced === true && phoneme.subType.includes("voiceless")) {
@@ -34,26 +54,7 @@ const Phoneme = ({ phoneme }) => {
         color = "voiced"
     }
 
-    let flash = false
-    if (display.bilabial && phoneme.subType.includes("bilabial")) {
-        flash = true
-    } else if (display.alveolar && phoneme.subType.includes("alveolar")) {
-        flash = true
-    } else if (display.palatoalveolar && phoneme.subType.includes("palato-alveolar")) {
-        flash = true
-    } else if (display.velar && phoneme.subType.includes("velar")) {
-        flash = true
-    } else if (display.labiodental && phoneme.subType.includes("labio-dental")) {
-        flash = true
-    } else if (display.dental && phoneme.subType.includes("dental")) {
-        flash = true
-    }  else if (display.glottal && phoneme.subType.includes("glottal")) {
-        flash = true
-    } else if (display.postalveolar && phoneme.subType.includes("postalveolar")) {
-        flash = true
-    } else if (display.palatal && phoneme.subType.includes("palatal")) {
-        flash = true
-    }
+    
     
 
     const keyFunc = () => {
