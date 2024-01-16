@@ -296,3 +296,14 @@ export const getConsonants = () => {
     })
     return consonants
 }
+
+export const getRandomConsonants = () => {
+    const consonants = []
+    phonemes.forEach((item) => {
+        if (item.type === "consonant") {
+            consonants.push(item)
+        }
+    })
+    const randomConsonants = []
+    return consonants
+}

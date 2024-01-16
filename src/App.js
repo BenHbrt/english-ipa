@@ -9,6 +9,7 @@ import Consonants from './components/Consonants';
 import ControlPanel from './components/ControlPanel';
 import ModeSelector from './components/ModeSelector';
 import Keyboard from './components/Keyboard';
+import Quiz from './components/Quiz/Quiz';
 
 const html = document.querySelector("html")
 
@@ -41,7 +42,7 @@ export const DisplayContext = createContext({
 });
 
 export const ModeContext = createContext({
-  mode: {sound: true, keyboard: false},
+  mode: {sound: true, keyboard: false, search: false, quiz: true},
   text: "",
   description: ""
 })
@@ -75,7 +76,7 @@ function App() {
   const displayValue = { display, setDisplay }
 
   const [mode, setMode] = useState({
-    mode: {sound: true, keyboard: false, search: false},
+    mode: {sound: true, keyboard: false, search: false, quiz: false},
     text: "",
     description: ""
   })
@@ -108,30 +109,36 @@ function App() {
   return (
     <div className="App">
       <ModeContext.Provider value={modeValue}>
-      <DisplayContext.Provider value={displayValue}>
-        <h1>Phonemic Chart (British English)</h1>
-        {mode.description ?
-        <div className="description" style={{top: mousePos.y - 15, left: mousePos.x + 10}}>
-          {mode.description}
-        </div>
-        : null
+      <DisplayContext.Provider value={displayValue}> 
+        <h1>{`${mode.mode.quiz === true ? "Phonemic Symbols Quiz" : "Phonemic Chart (British English)"}`}</h1>
+        {mode.mode.quiz === true ?
+        <Quiz />
+        :
+        <>
+          {mode.description ?
+          <div className="description" style={{top: mousePos.y - 15, left: mousePos.x + 10}}>
+            {mode.description}
+          </div>
+          : null
+          }
+          <div className="container">
+            <div className="chartContainer">
+              <ControlPanel />
+              <div className={`vowels ${display.vowels ? "vowelsLine" : ""}`}>
+                <Monophthongs />
+                <Diphthongs />
+              </div>
+              <Consonants />
+              <div className="keyboardContainer">
+                <ModeSelector />
+                {
+                  mode.mode.keyboard ? <Keyboard /> : null
+                }
+              </div>
+            </div> 
+          </div>
+        </>
         }
-        <div className="container">
-          <div className="chartContainer">
-            <ControlPanel />
-            <div className={`vowels ${display.vowels ? "vowelsLine" : ""}`}>
-              <Monophthongs />
-              <Diphthongs />
-            </div>
-            <Consonants />
-            <div className="keyboardContainer">
-              <ModeSelector />
-              {
-                mode.mode.keyboard ? <Keyboard /> : null
-              }
-            </div>
-          </div> 
-        </div>
       </DisplayContext.Provider>
       </ModeContext.Provider>
     </div>

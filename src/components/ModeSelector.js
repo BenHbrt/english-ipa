@@ -8,6 +8,7 @@ const ModeSelector = () => {
             <ModeButton name={"sound"} />
             <ModeButton name={"keyboard"} />
             <ModeButton name={"search"} />
+            <ModeButton name={"quiz"} />
         </div>
     )
 }

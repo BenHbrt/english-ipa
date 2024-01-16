@@ -77,9 +77,10 @@ const ControlPanel = () => {
     }
 
     const handleVowels = (input) => {
+        console.log("HI")
         const newObj = { ...display }
         newObj.voiced = false
-        newObj[input] = !display.input
+        newObj[input] = !display[input]
         setDisplay(newObj)
     }
 
@@ -88,7 +89,7 @@ const ControlPanel = () => {
             <div className="controlPanel_vowels">
                 <Button func={() => handleChange("vowels")} name={"vowels"} />
                 <div>
-                    <Button func={() => setDisplay((prev) => {return {...prev, monophthongs: !display.monothongs}})} name={"monophthongs"} />
+                    <Button func={() => setDisplay((prev) => {return {...prev, monophthongs: !display.monophthongs}})} name={"monophthongs"} />
                     <Button func={() => setDisplay((prev) => {return {...prev, diphthongs: !display.diphthongs}})} name={"diphthongs"} />
                     <Button func={() => handleVowels("short")} name={"short"} />
                     <Button func={() => handleVowels("long")} name={"long"} />

@@ -3,3 +3,13 @@
 .modeButton:hover {
     cursor: pointer;
 }
+
+.modeButton {
+    &_quiz {
+        font-size: 40px;
+        
+        &.selected {
+            font-weight: 700;
+        }
+    }
+}
