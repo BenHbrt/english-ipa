@@ -49,8 +49,8 @@ const ModeButton = ({ name }) => {
 
     return (
         <div className="modeButton" onClick={() => func(name)}>
-            {name === "quiz" ?
-            <div className={`modeButton_quiz ${mode.mode[name] ? "selected" : ""}`}>?</div>
+            {name === "quiz" ? null
+            
             :
             <img src={require(`../img/${name}_${mode.mode[name] ? "600" : "300" }.png`)} alt={""} />
             }
@@ -59,3 +59,4 @@ const ModeButton = ({ name }) => {
 }
 
 export default ModeButton
+{/* <div className={`modeButton_quiz ${mode.mode[name] ? "selected" : ""}`}>?</div> */}
